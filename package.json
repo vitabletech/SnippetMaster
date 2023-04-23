@@ -1,0 +1,65 @@
+{
+  "name": "snippetmaster",
+  "displayName": "Snippet Master",
+  "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages.",
+  "version": "0.0.1",
+  "publisher": "msrajawat298",
+  "author": {
+    "name": "Mayank singh Kushwah",
+    "email": "msrajawat298+vscode@gmail.com",
+    "url": "https://vitabletech.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitabletec/SnippetMaster.git"
+  },
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "keywords": [
+    "visual-studio-code",
+    "vscode",
+    "snippet",
+    "code-snippets",
+    "custom-snippets",
+    "programming",
+    "web-development",
+    "php",
+    "javascript",
+    "html",
+    "css",
+    "msrajawat298",
+    "vitabletech",
+    "SnippetMaster",
+    "CodeWizard",
+    "QuickCode",
+    "CodeGenius",
+    "CodeBoost",
+    "CodeNinja",
+    "CodeSavior",
+    "CodeGuru",
+    "QuickSnippets",
+    "CodeHelper",
+    "CodeBloom",
+    "SnipMateX",
+    "CodeHatch",
+    "QuickSnipper",
+    "CodeNexus",
+    "SnipAssist",
+    "CodeFuse",
+    "SnipPilot",
+    "CodeWise",
+    "SnipCraft"
+  ]
+}
