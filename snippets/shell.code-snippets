@@ -1,1 +1,143 @@
-{}
+{
+  "grep": {
+    "prefix": "_grep",
+    "body": [
+      "grep -nr \"search_term\" . --exclude-dir={.git,build,ci,config,www} --color"
+    ],
+    "description": "Search for a term in the current directory, excluding certain directories"
+  },
+  "Export MySQL table schema": {
+    "prefix": "_export_mysql_schema",
+    "body": [
+      "mysqldump -uusername -ppassword --no-data databasename table1 table2 table3 > path/filename.sql"
+    ],
+    "description": "Export the schema for specified MySQL tables to a .sql file"
+  },
+  "Import data into a table": {
+    "prefix": "_import_data",
+    "body": ["mysql -u username -p databasename < path/example.sql"],
+    "description": "This will execute the mysql command with the -u flag for the username, -p flag for the password prompt, and the name of the database. The < symbol is used to redirect the contents of the .sql file to the mysql command, which will import the data into the specified database."
+  },
+  "Import data into a database": {
+    "prefix": "_import_db",
+    "body": [
+      "gunzip < impordb_filename.gz | mysql -uREPLACE_DB_USERNAME -pREPLACE_DB_PASSWORD dbname"
+    ],
+    "description": "Imports data from a compressed file into a MySQL database."
+  },
+  "Export data from a database": {
+    "prefix": "_export_db",
+    "body": [
+      "mysqldump -uREPLACE_DB_USERNAME -pREPLACE_DB_PASSWORD DB_NAME | gzip > EXPORT_FILENAME.gz"
+    ],
+    "description": "Exports data from a MySQL database and compresses it into a gzip file."
+  },
+  "Export database schema without data": {
+    "prefix": "_export_db_schema",
+    "body": [
+      "mysqldump -uREPLACE_DB_USERNAME -pREPLACE_DB_PASSWORD --no-data DB_NAME > EXPORT_FILENAME.gz"
+    ],
+    "description": "Exports the schema of a MySQL database without data."
+  },
+  "Find sudo user in /etc/group": {
+    "prefix": "_find_sudo_user",
+    "body": ["grep -Po '^sudo.+:\\K.*$' /etc/group"],
+    "description": "Displays the list of users with sudo privileges from the /etc/group file"
+  },
+  "Show directory size": {
+    "prefix": "_dir_size",
+    "body": ["du -h --max-depth=1", ""],
+    "description": "Displays the size of the current directory and its contents in human-readable format"
+  },
+  "Count files in each directory": {
+    "prefix": "_count_files",
+    "body": [
+      "find . -printf \"%h\\n\" | cut -d/ -f-2 | sort | uniq -c | sort -rn"
+    ],
+    "description": "Recursively counts the number of files in each directory."
+  },
+  "List files with .rej extension": {
+    "prefix": "_list_specific_files",
+    "body": ["find . -type f -name '*.specific' -printf '%TY-%Tm-%Td %TT %p\\n' | sort"],
+    "description": "Lists files with the extension .specific and their modification times."
+  },
+  "Mount remote directory via SSHFS": {
+    "prefix": "_mount_sshfs",
+    "body": ["sshfs username@server_address.com:/home/username/ /home/php/mounted_projects/yourlocaldirname/ -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3"],
+    "description": "Mounts a remote directory via SSHFS."
+  },
+  "Kill process in Linux": {
+    "prefix": "_kill_process_linux",
+    "body": ["sudo kill -9 sudo lsof -t -i:3000"],
+    "description": "Kills a process running on port 3000 in Linux."
+  },
+
+  "Display files with permissions": {
+    "prefix": "_display_files_permissions",
+    "body": ["stat -c '%a - %n' directory/*"],
+    "description": "Displays the permissions of files in a directory in Linux."
+  },
+
+  "Edit file without vim": {
+    "prefix": "_edit_file_no_vim",
+    "body": [
+      "sed -i '/SSLCertificateFile.*snakeoil.pem/cSSLCertificateFile /etc/ssl/certs/mycert.crt' /etc/apache2/sites-available/default-ssl.conf"
+    ],
+    "description": "Edits a file without using vim in Linux."
+  },
+
+  "Create zip file in Linux": {
+    "prefix": "_create_zip_linux",
+    "body": ["zip -r filename.zip directory_name"],
+    "description": "Creates a zip file of a directory in Linux."
+  },
+
+  "Clone website with wget": {
+    "prefix": "_clone_website_wget",
+    "body": [
+      "wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --no-host-directories --execute robots=off --waitretry=10 --retry-connrefused --recursive --level=inf --no-clobber --no-check-certificate --output-file=wget.log <website_url>"
+    ],
+    "description": "Clones a website with all connected pages and creates a log file using wget in Linux."
+  },
+
+  "Import data into table": {
+    "prefix": "_import_data_table",
+    "body": ["mysql -u username -p databasename < path/example.sql"],
+    "description": "Imports data from a SQL file into a database table in Linux."
+  },
+  "Update apt": {
+    "prefix": "_update_apt",
+    "body": ["sudo apt-get update"],
+    "description": "Updates the apt package manager."
+  },
+  "Install Apache": {
+    "prefix": "_install_apache",
+    "body": ["sudo apt-get install apache2"],
+    "description": "Installs the Apache web server."
+  },
+  "Install PHP": {
+    "prefix": "_install_php",
+    "body": ["sudo apt-get install php libapache2-mod-php"],
+    "description": "Installs PHP and the PHP module for Apache."
+  },
+  "Restart Apache": {
+    "prefix": "_restart_apache",
+    "body": ["sudo systemctl restart apache2"],
+    "description": "Restarts the Apache web server."
+  },
+  "Install MySQL": {
+    "prefix": "_install_mysql",
+    "body": ["sudo apt-get install mysql-server"],
+    "description": "Installs the MySQL database server."
+  },
+  "Install phpMyAdmin": {
+    "prefix": "_install_phpmyadmin",
+    "body": [
+      "sudo apt-get install phpmyadmin php-mbstring php-gettext",
+      "# If any error found link php-gettext not found, run the following command:",
+      "# sudo apt update && sudo apt install phpmyadmin php-mbstring",
+      "know more : https://github.com/msrajawat298/msrajawat298/blob/main/aws-ec2-learning/aws-configration.txt"
+    ],
+    "description": "Installs phpMyAdmin and its dependencies."
+  }
+}

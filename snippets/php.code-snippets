@@ -19,11 +19,116 @@
 		],
 		"description": "Dumps information about the $data variable."
 	},
-	"_printr": {
+	"printr": {
 		"prefix": "_printr",
 		"body": [
 			"<pre>attribute :: {{print_r(attribute)}}</pre>"
 		],
 		"description": "print_r for template enginee like twig, blade When working with template engines like Twig or Blade, it's important to keep in mind that the code you write will ultimately be rendered as HTML or some other output format. This means that any debugging information or comments you include should be designed to be helpful for developers, but not visible to end-users."
+	},
+	"die": {
+		"prefix": "_die",
+		"body": [
+			"die(basename(__FILE__).\" : \".__LINE__);"
+		],
+		"description": "Halts the script and displays the filename and line number of where the function was called."
+	},
+	"print File Log": {
+		"prefix": "_printFileLog",
+		"body": [
+			"$$print_file = fopen(DIR_WS_IMAGES_TEMPIMAGES.'custom_log.log','a');\nfwrite($$print_file,print_r($$writedata,true));"
+			],
+		"description": "Opens a file for writing and writes data to it without exiting the script."
+	},
+	"php count": {
+		"prefix": "_count",
+		"body": [
+			"function phpCount($$value=''){",
+			"   if(is_countable($$value)) return count($$value);",
+			"   return 0;",
+			"}"
+		],
+		"description": "use of count in latest php version (v8.0=<) if value is not countable, it will occur the error. for prevent used our function phpCount. Counts the number of items in an array or object if it is countable. "
+	},
+	"error reporting on": {
+		"prefix": "_error_reporting_on",
+		"body": [
+			"   ini_set('display_errors', 1);",
+			"   ini_set('display_startup_errors', 1);",
+			"   error_reporting(E_ALL);"
+		],
+		"description": "Enables error reporting and displays all errors and warnings."
+	},
+	"get defined functions": {
+		"prefix": "_get_defined_functions",
+		"body": [
+			"echo '<br>MAYANK '.basename($_SERVER['PHP_SELF']).'</br>';",
+			"echo 'Defined Functions: <br>';",
+			"foreach (get_defined_functions()['user'] as $name) {",
+			"echo $name.'<br>';",
+			"}"
+		],
+		"description": "Displays all user-defined functions in PHP."
+	},
+	"get defined vars": {
+		"prefix": "_get_defined_vars",
+		"body": [
+			"echo '<br>MAYANK '.basename($_SERVER['PHP_SELF']).'</br>';",
+			"echo 'Defined Variables: <br>';",
+			"foreach (get_defined_vars() as $name => $value) {",
+			"echo $name.' => '.var_export($value, true).'<br>';",
+			"}"
+		],
+		"description": "Displays all variables currently defined in PHP."
+	},
+	"debug backtrace": {
+        "prefix": "_debug_backtrace_fileOnly",
+        "body": [
+            "$trace = debug_backtrace();",
+            "$print_file = fopen('custom_log.log','a');",
+            "foreach ($trace as $call) {",
+            "    fwrite($print_file,print_r(\"File: {$call['file']}, Line: {$call['line']}\\n\",true));",
+            "}"
+        ],
+        "description": "Print the file name and line number for each function call in the current script"
+    },
+	"debug Dump sql Params": {
+		"prefix": "_sqldebug",
+		"body": [
+			"echo '<br>' . basename(__FILE__) . ' ' . __LINE__ . '<pre> data :: '; print_r($Object->debugDumpParams()); echo '</pre>'; exit;"
+		],
+		"description": "Print SQL query parameters for debugging purposes"
+	},
+	"whereFunctionExist": {
+		"prefix": "_whereFunctionExist",
+		"body": [
+			"function whereFunctionExist($function_name='') {",
+			"    if(empty($function_name)) return false;",
+			"    $reflFunc = new ReflectionFunction($function_name);",
+			"    return $reflFunc->getFileName() . ':' . $reflFunc->getStartLine();",
+			"}"
+		],
+		"description": "Return the file name and line number where a specified function is defined"
+	},
+	"Get defined constants": {
+		"prefix": "_get_defined_constants",
+		"body": [
+			"echo '<br>' . basename(__FILE__) . ' ' . __LINE__ . '<pre> get_defined_constants :: '; print_r(get_defined_constants()); echo '</pre>'; exit;"
+		],
+		"description": "Print all defined constants in the current script"
+	},
+	"debug backtrace": {
+		"prefix": "_debug",
+		"body": [
+			"echo '<br>' . basename(__FILE__) . ' ' . __LINE__ . '<pre> debug_backtrace :: '; print_r(debug_backtrace()); echo '</pre>'; exit;"
+		],
+		"description": "Print a backtrace of function calls in the current script"
+	},
+	"backtrace function": {
+		"prefix": "_backtrace_function",
+		"body": [
+			"echo '<br>' . basename(__FILE__) . ' ' . __LINE__ . '<pre> whereFunctionExist :: '; print_r(whereFunctionExist('your_function_name')); echo '</pre>'; exit;"
+		],
+		"description": "Print the file name and line number where a specified function is defined"
 	}
 }

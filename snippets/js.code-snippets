@@ -1,9 +1,38 @@
 {
-	"_alertbox": {
+	"bootstrap Growl alert": {
 		"prefix": "_alertbGrowl",
 		"body": [
 			"$.bootstrapGrowl('Date cannot be greater than current date', { type: 'danger' });"
 		],
-		"description": "bootstrapGrowl alert"
+		"description": "Displays an alert using the bootstrapGrowl library."
+	},
+	"ajax": {
+		"prefix": "_ajax",
+		"body": [
+			"$.ajax({",
+			"url: 'url.php',",
+			"type: 'POST',",
+			"data: {id:data},",
+			"success: function(response){",
+			"alert(response);",
+			"window.location.href = 'url';",
+			"}",
+			"});"
+		],
+		"description": "Creates an AJAX request using jQuery."
+	},
+	"console.log": {
+		"prefix": "_console",
+		"body": [
+			"console.log(`%c ${data}`, 'font-size:50px; color: red;');"
+		],
+		"description": "Logs a message to the browser console with custom formatting."
+	},
+	"console.table": {
+		"prefix": "_console.table",
+		"body": [
+			"console.table(data);"
+		],
+		"description": "Logs a message to the browser console with custom formatting."
 	}
 }

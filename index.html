@@ -105,8 +105,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-      $.getJSON("package.json")
-        .done(function (data) {
+      async function getDataAndAppendTable() {
+        try {
+          const data = await $.getJSON("package.json");
           $("#version").text(data.version);
           $("#publisher").text(data.publisher);
           $("#company_name").text(data.publisher);
@@ -126,46 +127,49 @@
           // Create a variable to hold the HTML for the table
           let tableHtml = "";
 
-          $.each(data?.contributes?.snippets, function (key, value) {
+          for (const [key, value] of Object.entries(
+            data?.contributes?.snippets
+          )) {
             if (value.path !== "") {
-              $.getJSON(value.path).done(function (result) {
-                if (result) {
-                  $.each(result, function (snippetsName, snippetsDescription) {
-                    // Determine whether to show the full description or a simple one
-                    const description =
-                      snippetsDescription.description.length >
-                      descriptionThreshold
-                        ? `<details><summary>${snippetsDescription.description.substring(
-                            0,
-                            descriptionThreshold
-                          )}...</summary><p>${
-                            snippetsDescription.description
-                          }</p></details>`
-                        : snippetsDescription.description;
+              const result = await $.getJSON(value.path);
+              if (result) {
+                for (const [
+                  snippetsName,
+                  snippetsDescription,
+                ] of Object.entries(result)) {
+                  // Determine whether to show the full description or a simple one
+                  const description =
+                    snippetsDescription.description.length >
+                    descriptionThreshold
+                      ? `<details><summary>${snippetsDescription.description.substring(
+                          0,
+                          descriptionThreshold
+                        )}...</summary><p>${
+                          snippetsDescription.description
+                        }</p></details>`
+                      : snippetsDescription.description;
 
-                    // Add the row to the HTML for the table
-                    tableHtml += `
-                  <tr>
-                    <td>${snippetsName}</td>
-                    <td>${snippetsDescription.prefix}</td>
-                    <td>${description}</td>
-                  </tr>
-                `;
-                  });
-
-                  // Append the table HTML to the table body
-                  $("#table-body").html(tableHtml);
-
-                  // Apply DataTables to the table
-                  $("#snippets-table").DataTable();
+                  // Add the row to the HTML for the table
+                  tableHtml += `
+              <tr>
+                <td>${snippetsName}</td>
+                <td>${snippetsDescription.prefix}</td>
+                <td>${description}</td>
+              </tr>
+            `;
                 }
-              });
+                // Append the table HTML to the table body
+                $("#table-body").html(tableHtml);
+              }
             }
-          });
-        })
-        .fail(function () {
-          console.error("Failed to load package.json");
-        });
+          }
+          $("#snippets-table").DataTable();
+        } catch (error) {
+          console.error("Failed to load package.json", error);
+        }
+      }
+
+      getDataAndAppendTable();
     </script>
     <!-- CSS -->
     <link

@@ -8,3 +8,4 @@ install
 .husky
 commitlint.config.js
 index.html
+.github/

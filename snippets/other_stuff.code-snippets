@@ -1,0 +1,17 @@
+{
+  "done": {
+    "prefix": "_done",
+    "body": ["(done ✓)"],
+    "description": "Indicates that a task or operation has been completed successfully."
+  },
+  "Find Wifi password in Windows": {
+    "prefix": "_find_wifi",
+    "body": ["netsh wlan show profile name=${1:profile_name} key=clear"],
+    "description": "Find the WiFi password on Windows using the netsh command."
+  },
+  "Upgrades all installed applications": {
+    "prefix": "_upgrade_all",
+    "body": ["winget upgrade --all", "(done ✓)"],
+    "description": "Upgrades all installed applications via Windows Package Manager (winget)."
+  }
+}
