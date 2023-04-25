@@ -47,7 +47,10 @@
             <li><strong>Publisher:</strong> <span id="publisher"></span></li>
             <li><strong>Author:</strong> <span id="author"></span></li>
             <li><strong>Email:</strong><span id="email"></span></li>
-            <li><strong>URL:</strong><span id="url"></span></li>
+            <li><strong>Organization url: </strong><span id="url"></span></li>
+            <li>
+              <strong>Repository URL: </strong><span id="repository_url"></span>
+            </li>
           </ul>
           <hr />
           <div class="col-md-12">
@@ -69,6 +72,8 @@
             </ul>
           </div>
           <div class="col-md-12 mt-5 table-responsive">
+            <h3>Snippets Description Table:</h3>
+            <hr />
             <table id="snippets-table" class="table">
               <thead>
                 <tr>
@@ -111,6 +116,9 @@
           $("#email").text(data.author.email);
           $("#url").html(
             `<a href="${data.author.url}" target="_blank"> ${data.author.url} </a>`
+          );
+          $("#repository_url").html(
+            `<a href="${data.repository.url}" target="_blank"> ${data.repository.url} </a>`
           );
           $("#year").text(new Date().getFullYear());
           // Set a threshold for the description length
@@ -160,12 +168,25 @@
         });
     </script>
     <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"
+    />
 
-<!-- JS -->
-<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-
+    <!-- JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"
+    ></script>
   </body>
 </html>

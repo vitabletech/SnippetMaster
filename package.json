@@ -25,7 +25,7 @@
   "scripts": {
     "husky": "husky install"
   },
-  "homepage": "https://github.com/vitabletec/SnippetMaster",
+  "homepage": "https://vitabletec.github.io/SnippetMaster/",
   "license": "MIT",
   "icon": "logo.png",
   "contributes": {
