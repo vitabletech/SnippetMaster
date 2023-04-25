@@ -5,22 +5,27 @@ on:
     tags:
       - 'v*'
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
       - name: Install dependencies
-        run: npm ci
-      - name: Build extension
-        run: vsce package
-      - name: Publish extension
-        uses: shibayan/publish-vscode@v1
+        run: npm install
+      - name: Authenticate with Visual Studio Code Marketplace
+        uses: cschleiden/vscode-marketplace-publish@v1
         with:
-          vsix_file: ./*.vsix
-          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publisher_id: YOUR_PUBLISHER_ID
-          extension_id: YOUR_EXTENSION_ID
+          "publisher-id": "YOUR_PUBLISHER_ID"
+          "extension-id": "YOUR_EXTENSION_ID"
+          "personal-access-token": "${{ secrets.GITHUB_TOKEN }}"
+      - name: Publish to Visual Studio Code Marketplace
+        uses: cschleiden/vscode-marketplace-publish@v1
+        with:
+          "publisher-id": "YOUR_PUBLISHER_ID"
+          "extension-id": "YOUR_EXTENSION_ID"
+          "package-path": "."
