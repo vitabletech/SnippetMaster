@@ -14,9 +14,10 @@ To install SnippetMaster, follow these steps:
 
 ## Usage
 
-Once installed, SnippetMaster will automatically register its snippets with Visual Studio Code. To use a snippet, simply type its trigger keyword in the editor and press `Tab`.
+Once installed, SnippetMaster will automatically register its snippets with Visual Studio Code. To use a snippet, simply type its trigger keyword in the editor and press `Enter`.
 
-For example, to use the `_mayank` snippet, type `_mayank` in your editor and press `Tab`. This will expand the snippet into the corresponding code block.
+For example, to use the `printr` snippet, type `_printr` in your editor and press `enter`. This will expand the snippet into the corresponding code block.
+For more information : https://vitabletec.github.io/SnippetMaster/
 
 ## Supported Languages
 
@@ -24,29 +25,21 @@ SnippetMaster currently supports the following languages:
 
 * PHP
 * JavaScript
-* HTML
-* Text
-* shell script
+* Sql
+* shell script/cmd
+* windows use full commands
 
 ## Issues
 \
-If you encounter any issues or have suggestions for improvement, please file an issue on the [SnippetMaster GitHub repository](https://github.com/msrajawat298/SnippetMaster/issues).
+If you encounter any issues or have suggestions for improvement, please file an issue on the [SnippetMaster GitHub repository](https://github.com/vitabletec/SnippetMaster/issues).
 
 ## Contributing
 
-Contributions are welcome! If you would like to contribute to SnippetMaster, please create a pull request on the [SnippetMaster GitHub repository](https://github.com/msrajawat298/SnippetMaster/pulls).
+Contributions are welcome! If you would like to contribute to SnippetMaster, please create a pull request on the [SnippetMaster GitHub repository](https://github.com/vitabletec/SnippetMaster/pulls).
 
 ## License
 
-SnippetMaster is licensed under the [MIT License](https://github.com/msrajawat298/SnippetMaster/blob/main/LICENSE).
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
+SnippetMaster is licensed under the [MIT License](https://github.com/vitabletec/SnippetMaster/blob/main/LICENSE).
 
 ## Features
 

@@ -2,7 +2,7 @@
   "name": "snippetmaster",
   "displayName": "Snippet Master",
   "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "vitabletech",
   "author": {
     "name": "Mayank singh Kushwah",
@@ -83,5 +83,6 @@
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "husky": "^8.0.3"
-  }
+  },
+  "pricing": "Free"
 }
