@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Snippet Master</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="container">
+            <img
+              src="images/snippetmaster.webp"
+              class="mx-auto d-block img-fluid w-50"
+            />
+          </div>
+          <p class="lead text-center" id="description"></p>
+          <hr />
+          <h3>Information:</h3>
+          <ul>
+            <li><strong>Version:</strong> <span id="version"></span></li>
+            <li><strong>Publisher:</strong> <span id="publisher"></span></li>
+            <li><strong>Author:</strong> <span id="author"></span></li>
+            <li><strong>Email:</strong><span id="email"></span></li>
+            <li><strong>URL:</strong><span id="url"></span></li>
+          </ul>
+          <hr />
+          <div class="col-md-12">
+            <h3>Features</h3>
+            <ul>
+              <li>
+                Custom code snippets for a variety of programming languages.
+              </li>
+              <li>
+                Increases productivity by quickly inserting common code patterns
+                and snippets.
+              </li>
+              <li>
+                Supports multiple programming languages like PHP, JavaScript,
+                HTML, and CSS.
+              </li>
+              <li>Easy to use and install in Visual Studio Code.</li>
+              <li>Open source with a permissive MIT license.</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-5 table-responsive">
+            <table id="snippets-table" class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Prefix</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+      <div class="container text-center mt-3">
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              &copy; <span id="year"></span> SnippetMaster by
+              <span id="company_name"></span>. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $.getJSON("package.json")
+        .done(function (data) {
+          $("#version").text(data.version);
+          $("#publisher").text(data.publisher);
+          $("#company_name").text(data.publisher);
+          $("#displayName").text(data.displayName);
+          $("#description").text(data.description);
+          $("#author").text(data.author.name);
+          $("#email").text(data.author.email);
+          $("#url").html(
+            `<a href="${data.author.url}" target="_blank"> ${data.author.url} </a>`
+          );
+          $("#year").text(new Date().getFullYear());
+          // Set a threshold for the description length
+          const descriptionThreshold = 50;
+          // Create a variable to hold the HTML for the table
+          let tableHtml = "";
+
+          $.each(data?.contributes?.snippets, function (key, value) {
+            if (value.path !== "") {
+              $.getJSON(value.path).done(function (result) {
+                if (result) {
+                  $.each(result, function (snippetsName, snippetsDescription) {
+                    // Determine whether to show the full description or a simple one
+                    const description =
+                      snippetsDescription.description.length >
+                      descriptionThreshold
+                        ? `<details><summary>${snippetsDescription.description.substring(
+                            0,
+                            descriptionThreshold
+                          )}...</summary><p>${
+                            snippetsDescription.description
+                          }</p></details>`
+                        : snippetsDescription.description;
+
+                    // Add the row to the HTML for the table
+                    tableHtml += `
+                  <tr>
+                    <td>${snippetsName}</td>
+                    <td>${snippetsDescription.prefix}</td>
+                    <td>${description}</td>
+                  </tr>
+                `;
+                  });
+
+                  // Append the table HTML to the table body
+                  $("#table-body").html(tableHtml);
+
+                  // Apply DataTables to the table
+                  $("#snippets-table").DataTable();
+                }
+              });
+            }
+          });
+        })
+        .fail(function () {
+          console.error("Failed to load package.json");
+        });
+    </script>
+    <!-- CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"/>
+
+<!-- JS -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+  </body>
+</html>

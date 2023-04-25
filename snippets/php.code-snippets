@@ -1,0 +1,29 @@
+{
+	"print_r": {
+		"prefix": "_print_r",
+		"body": [
+			"echo '<br>' . __FILE__ . ' (' . __LINE__ . ')<pre> data :: ';",
+			"print_r($$data);",
+			"echo '</pre>';",
+			"exit;"
+		],
+		"description": "Outputs a human-readable representation of the $data variable."
+	},
+	"var_dump": {
+		"prefix": "_var_dump",
+		"body": [
+			"echo '<br>' . __FILE__ . ' (' . __LINE__ . ')<pre> var_dump :: ';",
+			"var_dump($$data);",
+			"echo '</pre>';",
+			"exit;"
+		],
+		"description": "Dumps information about the $data variable."
+	},
+	"_printr": {
+		"prefix": "_printr",
+		"body": [
+			"<pre>attribute :: {{print_r(attribute)}}</pre>"
+		],
+		"description": "print_r for template enginee like twig, blade When working with template engines like Twig or Blade, it's important to keep in mind that the code you write will ultimately be rendered as HTML or some other output format. This means that any debugging information or comments you include should be designed to be helpful for developers, but not visible to end-users."
+	}
+}

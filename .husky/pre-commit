@@ -1,0 +1,12 @@
+#!/bin/sh
+
+. "$(dirname -- "$0")/_/husky.sh"
+# Validate the JSON data in all .code-snippets files in the snippets directory
+for file in $(find snippets -name '*.code-snippets')
+do
+  echo $file
+  jsonlint -q $file || {
+    echo "ERROR: Invalid JSON in $file"
+    exit 1
+  }
+done

@@ -1,9 +1,9 @@
 {
   "name": "snippetmaster",
   "displayName": "Snippet Master",
-  "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages.",
-  "version": "0.0.1",
-  "publisher": "msrajawat298",
+  "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
+  "version": "1.0.0",
+  "publisher": "vitabletech",
   "author": {
     "name": "Mayank singh Kushwah",
     "email": "msrajawat298+vscode@gmail.com",
@@ -13,17 +13,34 @@
     "type": "git",
     "url": "https://github.com/vitabletec/SnippetMaster.git"
   },
+  "bugs": {
+    "url": "https://github.com/vitabletec/SnippetMaster/issues"
+  },
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
     "Snippets"
   ],
+  "scripts": {
+    "husky": "husky install"
+  },
+  "homepage": "https://github.com/vitabletec/SnippetMaster",
+  "license": "MIT",
+  "icon": "logo.png",
   "contributes": {
     "snippets": [
       {
         "language": "",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/php.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/js.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/shell.code-snippets"
       }
     ]
   },
@@ -61,5 +78,10 @@
     "SnipPilot",
     "CodeWise",
     "SnipCraft"
-  ]
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "husky": "^8.0.3"
+  }
 }

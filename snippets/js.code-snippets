@@ -1,0 +1,9 @@
+{
+	"_alertbox": {
+		"prefix": "_alertbGrowl",
+		"body": [
+			"$.bootstrapGrowl('Date cannot be greater than current date', { type: 'danger' });"
+		],
+		"description": "bootstrapGrowl alert"
+	}
+}

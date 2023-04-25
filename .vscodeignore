@@ -2,3 +2,9 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+favicon_io/
+node_modules/
+install
+.husky
+commitlint.config.js
+index.html
