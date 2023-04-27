@@ -36,7 +36,7 @@
 	"print File Log": {
 		"prefix": "_printFileLog",
 		"body": [
-			"$$print_file = fopen(DIR_WS_IMAGES_TEMPIMAGES.'custom_log.log','a');\nfwrite($$print_file,print_r($$writedata,true));"
+			"$$print_file = fopen(__DIR__.'custom_log.log','a');\nfwrite($$print_file,print_r($$writedata,true));"
 			],
 		"description": "Opens a file for writing and writes data to it without exiting the script."
 	},

@@ -1,3 +1,8 @@
+Welcome to SnippetMaster - a VS Code extension to boost your productivity.
+
+## Introduction
+
+Exciting news! We have just published our first VS Code extension and it might just be the tool you need to boost your productivity. Check it out [here](https://marketplace.visualstudio.com/items?itemName=vitabletech.snippetmaster).
 # SnippetMaster
 
 SnippetMaster is a Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.
@@ -42,12 +47,29 @@ Contributions are welcome! If you would like to contribute to SnippetMaster, ple
 SnippetMaster is licensed under the [MIT License](https://github.com/vitabletec/SnippetMaster/blob/main/LICENSE).
 
 ## Features
-
+* Custom code snippets for a variety of programming languages.
+* Increases productivity by quickly inserting common code patterns and snippets.
+* Supports multiple programming languages like PHP, JavaScript, SQL, Shell, window commands.
+* Easy to use and install in Visual Studio Code.
+* Open source with a permissive MIT license.
 ## For more information
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-**Enjoy!**
+## Tutorial
 
-## For more information
+Want to learn how to use it? Check out the tutorial [here](https://vitabletec.github.io/SnippetMaster/).
+
+## Rate Us
+
+If you've already tried it, please do rate us on the Marketplace [here](https://marketplace.visualstudio.com/items?itemName=vitabletech.snippetmaster&ssr=false#review-details).
+
+## More Info
+
+Want to know more about the importance of SnippetMaster? Check out this video [here](https://youtu.be/gEW9eqBYod8).
+
+## KT Session
+
+For a KT session on how to use it effectively, watch this video [here](https://youtu.be/SjAkQXMdZqo).
+**Enjoy!**
