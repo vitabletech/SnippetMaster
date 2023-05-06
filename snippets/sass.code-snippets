@@ -1,0 +1,22 @@
+{
+    "Mixin Declaration": {
+        "prefix": "_mixin",
+        "body": ["@mixin ${1:name}(${2:arg}) {", "\t$3", "}"],
+        "description": "Declare a mixin"
+      },
+      "SCSS Nested Selector": {
+        "prefix": "_nest",
+        "body": ["&.${1:classname} {", "\t$2", "}"],
+        "description": "Create a nested selector"
+      },
+      "SCSS Extend Placeholder": {
+        "prefix": "_extend",
+        "body": ["&:extend(.${1:placeholder}) {", "\t$2", "}"],
+        "description": "Extend a placeholder selector"
+      },
+      "Sass Compile": {
+        "prefix": "_sasscompile",
+        "body": ["sass ${1:input-file-path.sass} ${2:output-file-path.css} ${3:flags}"],
+        "description": "Compile a Sass file to CSS"
+      }
+}

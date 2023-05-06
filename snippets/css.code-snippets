@@ -1,0 +1,35 @@
+{
+  "CSS Import": {
+    "scope": "css",
+    "prefix": "_cssimport",
+    "body": ["@import url('$0');"],
+    "description": "An import statement"
+  },
+
+  "CSS ID": {
+    "scope": "css",
+    "prefix": "_cssid",
+    "body": ["#${1:name} {", "\t$0", "}"],
+    "description": "CSS Style with ID"
+  },
+  "CSS Class": {
+    "scope": "css",
+    "prefix": "_cssclass",
+    "body": [".${1:name} {", "\t$0", "}"],
+    "description": "CSS Style with Class"
+  },
+
+  "CSS Page": {
+    "scope": "css",
+    "prefix": "_csspage",
+    "body": [
+      "* {margin: 0px;padding:0px;width:100%;height:100%;overflow-x:hidden;}"
+    ],
+    "description": "Makes your page nice"
+  },
+  "CSS Media Query": {
+    "prefix": "media",
+    "body": ["@media (${1:condition}) {", "\t$2", "}"],
+    "description": "Create a media query"
+  }
+}
