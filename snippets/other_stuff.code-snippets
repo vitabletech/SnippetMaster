@@ -11,7 +11,7 @@
   },
   "Upgrades all installed applications": {
     "prefix": "_upgrade_all",
-    "body": ["winget upgrade --all", "(done ✓)"],
+    "body": ["winget upgrade --all"],
     "description": "Upgrades all installed applications via Windows Package Manager (winget)."
   }
 }

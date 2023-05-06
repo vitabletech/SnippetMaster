@@ -1,12 +1,12 @@
 {
   "name": "snippetmaster",
-  "displayName": "Snippet Master",
+  "displayName": "All in One Snippet Master",
   "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "vitabletech",
   "author": {
     "name": "Mayank singh Kushwah",
-    "email": "msrajawat298+vscode@gmail.com",
+    "email": "info@vitabletech.in",
     "url": "https://vitabletech.in"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "Snippets"
   ],
   "scripts": {
+    "postinstall": "npm install -g jsonlint && npm run husky",
     "husky": "husky install"
   },
   "homepage": "https://vitabletec.github.io/SnippetMaster/",
@@ -45,16 +46,35 @@
       {
         "language": "",
         "path": "./snippets/other_stuff.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/sass.code-snippets"
       }
     ]
   },
   "keywords": [
     "visual-studio-code",
     "vscode",
+    "All in One Snippet Master",
+    "python",
+    "react",
+    "react development",
+    "windows commands",
+    "wordpress developer",
+    "wordpress code snippets",
+    "laravel developer",
+    "wordpress plugin",
+    "wordpress code snippet plugin",
+    "shell or linux commands",
+    "linux",
     "snippet",
     "code-snippets",
     "custom-snippets",
-    "programming",
     "web-development",
     "php",
     "javascript",
@@ -63,19 +83,8 @@
     "msrajawat298",
     "vitabletech",
     "SnippetMaster",
-    "CodeWizard",
-    "QuickCode",
-    "CodeGenius",
     "CodeBoost",
-    "CodeNinja",
-    "CodeSavior",
-    "CodeGuru",
-    "QuickSnippets",
     "CodeHelper",
-    "CodeBloom",
-    "SnipMateX",
-    "CodeHatch",
-    "QuickSnipper",
     "CodeNexus",
     "SnipAssist",
     "CodeFuse",
@@ -86,7 +95,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "jsonlint": "^1.6.3"
   },
   "pricing": "Free"
 }
