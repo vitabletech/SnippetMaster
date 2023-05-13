@@ -22,7 +22,7 @@ To install SnippetMaster, follow these steps:
 Once installed, SnippetMaster will automatically register its snippets with Visual Studio Code. To use a snippet, simply type its trigger keyword in the editor and press `Enter`.
 
 For example, to use the `printr` snippet, type `_printr` in your editor and press `enter`. This will expand the snippet into the corresponding code block.
-For more information : https://vitabletec.github.io/SnippetMaster/
+For more information : https://vitabletech.github.io/SnippetMaster/
 
 ## Supported Languages
 
@@ -33,18 +33,24 @@ SnippetMaster currently supports the following languages:
 * Sql
 * shell script/cmd
 * windows use full commands
+* Css
+* Sass
+* Wordpress
+* Laravel
+* React
+* AngularJS
 
 ## Issues
-\
-If you encounter any issues or have suggestions for improvement, please file an issue on the [SnippetMaster GitHub repository](https://github.com/vitabletec/SnippetMaster/issues).
+
+If you encounter any issues or have suggestions for improvement, please file an issue on the [SnippetMaster GitHub repository](https://github.com/vitabletech/SnippetMaster/issues).
 
 ## Contributing
 
-Contributions are welcome! If you would like to contribute to SnippetMaster, please create a pull request on the [SnippetMaster GitHub repository](https://github.com/vitabletec/SnippetMaster/pulls).
+Contributions are welcome! If you would like to contribute to SnippetMaster, please create a pull request on the [SnippetMaster GitHub repository](https://github.com/vitabletech/SnippetMaster/pulls).
 
 ## License
 
-SnippetMaster is licensed under the [MIT License](https://github.com/vitabletec/SnippetMaster/blob/main/LICENSE).
+SnippetMaster is licensed under the [MIT License](https://github.com/vitabletech/SnippetMaster/blob/main/LICENSE).
 
 ## Features
 * Custom code snippets for a variety of programming languages.
@@ -59,7 +65,7 @@ SnippetMaster is licensed under the [MIT License](https://github.com/vitabletec/
 
 ## Tutorial
 
-Want to learn how to use it? Check out the tutorial [here](https://vitabletec.github.io/SnippetMaster/).
+Want to learn how to use it? Check out the tutorial [here](https://vitabletech.github.io/SnippetMaster/).
 
 ## Rate Us
 

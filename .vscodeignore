@@ -10,3 +10,4 @@ commitlint.config.js
 index.html
 .github/
 dummy
+package-lock.json
