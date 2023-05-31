@@ -166,5 +166,15 @@
       "}"
     ],
     "description": "This is a configuration object for a VSCode extension called \"SFTP\" (which stands for Secure File Transfer Protocol). It allows you to upload and download files to and from a remote server via SFTP, as well as synchronize changes between the local and remote files automatically. To use this configuration, you need to have the SFTP extension installed in your VSCode. Once you have it installed, you can create a new configuration file with this object and modify the values to match your own server details, such as \"host\", \"username\", \"password\", and \"remotePath\". You can then save the configuration file and use the SFTP extension to upload and synchronize files between your local machine and the remote server. Note that some of the values in this configuration file, such as the \"password\", should not be shared with others and should be kept secure."
+  },
+  "Git Author Reset Entire Project History": {
+    "prefix": "_git reset entire project history",
+    "body": ["git rebase -r --root --exec 'git commit --amend --no-edit --reset-author'"],
+    "description": "Git Author Reset Entire Project History"
+  },
+  "Git Author Reset Single Commit": {
+    "prefix": "_git reset single commit",
+    "body": ["git commit --amend --no-edit --reset-author"],
+    "description": "Git Author Reset Single Commit"
   }
 }
