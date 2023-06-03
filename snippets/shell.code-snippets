@@ -176,5 +176,10 @@
     "prefix": "_git reset single commit",
     "body": ["git commit --amend --no-edit --reset-author"],
     "description": "Git Author Reset Single Commit"
+  },
+  "Generate SSH Key": {
+    "prefix": "_ssh key",
+    "body": ["ssh-keygen -t ed25519 -C 'your_email@example.com'"],
+    "description": "Generate SSH Key"
   }
 }
