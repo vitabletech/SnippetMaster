@@ -2,7 +2,7 @@
   "name": "snippetmaster",
   "displayName": "All in One Snippet Master",
   "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "publisher": "vitabletech",
   "author": {
     "name": "Mayank singh Kushwah",
@@ -54,6 +54,14 @@
       {
         "language": "",
         "path": "./snippets/sass.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/wp.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/wp_class_and_constants.code-snippets"
       }
     ]
   },
