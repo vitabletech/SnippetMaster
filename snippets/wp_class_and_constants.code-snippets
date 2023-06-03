@@ -1,0 +1,957 @@
+{
+    "ABSPATH": {
+        "prefix": "_ABSPATH",
+        "body": "ABSPATH",
+        "description": ""
+    },
+    "ADMIN_COOKIE_PATH": {
+        "prefix": "_ADMIN_COOKIE_PATH",
+        "body": "ADMIN_COOKIE_PATH",
+        "description": ""
+    },
+    "ALTERNATE_WP_CRON": {
+        "prefix": "_ALTERNATE_WP_CRON",
+        "body": "ALTERNATE_WP_CRON",
+        "description": ""
+    },
+    "ARRAY_A": {
+        "prefix": "_ARRAY_A",
+        "body": "ARRAY_A",
+        "description": ""
+    },
+    "ARRAY_N": {
+        "prefix": "_ARRAY_N",
+        "body": "ARRAY_N",
+        "description": ""
+    },
+    "AUTH_COOKIE": {
+        "prefix": "_AUTH_COOKIE",
+        "body": "AUTH_COOKIE",
+        "description": ""
+    },
+    "AUTH_KEY": {
+        "prefix": "_AUTH_KEY",
+        "body": "AUTH_KEY",
+        "description": ""
+    },
+    "AUTH_SALT": {
+        "prefix": "_AUTH_SALT",
+        "body": "AUTH_SALT",
+        "description": ""
+    },
+    "AUTOSAVE_INTERVAL": {
+        "prefix": "_AUTOSAVE_INTERVAL",
+        "body": "AUTOSAVE_INTERVAL",
+        "description": ""
+    },
+    "BLOG_ID_CURRENT_SITE": {
+        "prefix": "_BLOG_ID_CURRENT_SITE",
+        "body": "BLOG_ID_CURRENT_SITE",
+        "description": ""
+    },
+    "BLOGUPLOADDIR": {
+        "prefix": "_BLOGUPLOADDIR",
+        "body": "BLOGUPLOADDIR",
+        "description": ""
+    },
+    "CONCATENATE_SCRIPTS": {
+        "prefix": "_CONCATENATE_SCRIPTS",
+        "body": "CONCATENATE_SCRIPTS",
+        "description": ""
+    },
+    "COOKIE_DOMAIN": {
+        "prefix": "_COOKIE_DOMAIN",
+        "body": "COOKIE_DOMAIN",
+        "description": ""
+    },
+    "COOKIEHASH": {
+        "prefix": "_COOKIEHASH",
+        "body": "COOKIEHASH",
+        "description": ""
+    },
+    "COOKIEPATH": {
+        "prefix": "_COOKIEPATH",
+        "body": "COOKIEPATH",
+        "description": ""
+    },
+    "CUSTOM_TAGS": {
+        "prefix": "_CUSTOM_TAGS",
+        "body": "CUSTOM_TAGS",
+        "description": ""
+    },
+    "CUSTOM_USER_META_TABLE": {
+        "prefix": "_CUSTOM_USER_META_TABLE",
+        "body": "CUSTOM_USER_META_TABLE",
+        "description": ""
+    },
+    "CUSTOM_USER_TABLE": {
+        "prefix": "_CUSTOM_USER_TABLE",
+        "body": "CUSTOM_USER_TABLE",
+        "description": ""
+    },
+    "DAY_IN_SECONDS": {
+        "prefix": "_DAY_IN_SECONDS",
+        "body": "DAY_IN_SECONDS",
+        "description": ""
+    },
+    "DB_CHARSET": {
+        "prefix": "_DB_CHARSET",
+        "body": "DB_CHARSET",
+        "description": ""
+    },
+    "DB_COLLATE": {
+        "prefix": "_DB_COLLATE",
+        "body": "DB_COLLATE",
+        "description": ""
+    },
+    "DB_HOST": {
+        "prefix": "_DB_HOST",
+        "body": "DB_HOST",
+        "description": ""
+    },
+    "DB_NAME": {
+        "prefix": "_DB_NAME",
+        "body": "DB_NAME",
+        "description": ""
+    },
+    "DB_PASSWORD": {
+        "prefix": "_DB_PASSWORD",
+        "body": "DB_PASSWORD",
+        "description": ""
+    },
+    "DB_USER": {
+        "prefix": "_DB_USER",
+        "body": "DB_USER",
+        "description": ""
+    },
+    "DISABLE_WP_CRON": {
+        "prefix": "_DISABLE_WP_CRON",
+        "body": "DISABLE_WP_CRON",
+        "description": ""
+    },
+    "DISALLOW_FILE_EDIT": {
+        "prefix": "_DISALLOW_FILE_EDIT",
+        "body": "DISALLOW_FILE_EDIT",
+        "description": ""
+    },
+    "DISALLOW_FILE_MODS": {
+        "prefix": "_DISALLOW_FILE_MODS",
+        "body": "DISALLOW_FILE_MODS",
+        "description": ""
+    },
+    "DOING_AUTOSAVE": {
+        "prefix": "_DOING_AUTOSAVE",
+        "body": "DOING_AUTOSAVE",
+        "description": ""
+    },
+    "DOMAIN_CURRENT_SITE": {
+        "prefix": "_DOMAIN_CURRENT_SITE",
+        "body": "DOMAIN_CURRENT_SITE",
+        "description": ""
+    },
+    "EMPTY_TRASH_DAYS": {
+        "prefix": "_EMPTY_TRASH_DAYS",
+        "body": "EMPTY_TRASH_DAYS",
+        "description": ""
+    },
+    "EP_ALL": {
+        "prefix": "_EP_ALL",
+        "body": "EP_ALL",
+        "description": ""
+    },
+    "EP_ATTACHMENT": {
+        "prefix": "_EP_ATTACHMENT",
+        "body": "EP_ATTACHMENT",
+        "description": ""
+    },
+    "EP_AUTHORS": {
+        "prefix": "_EP_AUTHORS",
+        "body": "EP_AUTHORS",
+        "description": ""
+    },
+    "EP_CATEGORIES": {
+        "prefix": "_EP_CATEGORIES",
+        "body": "EP_CATEGORIES",
+        "description": ""
+    },
+    "EP_COMMENTS": {
+        "prefix": "_EP_COMMENTS",
+        "body": "EP_COMMENTS",
+        "description": ""
+    },
+    "EP_DATE": {
+        "prefix": "_EP_DATE",
+        "body": "EP_DATE",
+        "description": ""
+    },
+    "EP_DAY": {
+        "prefix": "_EP_DAY",
+        "body": "EP_DAY",
+        "description": ""
+    },
+    "EP_MONTH": {
+        "prefix": "_EP_MONTH",
+        "body": "EP_MONTH",
+        "description": ""
+    },
+    "EP_NONE": {
+        "prefix": "_EP_NONE",
+        "body": "EP_NONE",
+        "description": ""
+    },
+    "EP_PAGES": {
+        "prefix": "_EP_PAGES",
+        "body": "EP_PAGES",
+        "description": ""
+    },
+    "EP_PERMALINK": {
+        "prefix": "_EP_PERMALINK",
+        "body": "EP_PERMALINK",
+        "description": ""
+    },
+    "EP_ROOT": {
+        "prefix": "_EP_ROOT",
+        "body": "EP_ROOT",
+        "description": ""
+    },
+    "EP_SEARCH": {
+        "prefix": "_EP_SEARCH",
+        "body": "EP_SEARCH",
+        "description": ""
+    },
+    "EP_TAGS": {
+        "prefix": "_EP_TAGS",
+        "body": "EP_TAGS",
+        "description": ""
+    },
+    "EP_YEAR": {
+        "prefix": "_EP_YEAR",
+        "body": "EP_YEAR",
+        "description": ""
+    },
+    "EZSQL_VERSION": {
+        "prefix": "_EZSQL_VERSION",
+        "body": "EZSQL_VERSION",
+        "description": ""
+    },
+    "FORCE_SSL_ADMIN": {
+        "prefix": "_FORCE_SSL_ADMIN",
+        "body": "FORCE_SSL_ADMIN",
+        "description": ""
+    },
+    "FORCE_SSL_LOGIN": {
+        "prefix": "_FORCE_SSL_LOGIN",
+        "body": "FORCE_SSL_LOGIN",
+        "description": ""
+    },
+    "FS_CHMOD_DIR": {
+        "prefix": "_FS_CHMOD_DIR",
+        "body": "FS_CHMOD_DIR",
+        "description": ""
+    },
+    "FS_CHMOD_FILE": {
+        "prefix": "_FS_CHMOD_FILE",
+        "body": "FS_CHMOD_FILE",
+        "description": ""
+    },
+    "HOUR_IN_SECONDS": {
+        "prefix": "_HOUR_IN_SECONDS",
+        "body": "HOUR_IN_SECONDS",
+        "description": ""
+    },
+    "IFRAME_REQUEST": {
+        "prefix": "_IFRAME_REQUEST",
+        "body": "IFRAME_REQUEST",
+        "description": ""
+    },
+    "IS_PROFILE_PAGE": {
+        "prefix": "_IS_PROFILE_PAGE",
+        "body": "IS_PROFILE_PAGE",
+        "description": ""
+    },
+    "LANGDIR": {
+        "prefix": "_LANGDIR",
+        "body": "LANGDIR",
+        "description": ""
+    },
+    "LOGGED_IN_COOKIE": {
+        "prefix": "_LOGGED_IN_COOKIE",
+        "body": "LOGGED_IN_COOKIE",
+        "description": ""
+    },
+    "LOGGED_IN_KEY": {
+        "prefix": "_LOGGED_IN_KEY",
+        "body": "LOGGED_IN_KEY",
+        "description": ""
+    },
+    "LOGGED_IN_SALT": {
+        "prefix": "_LOGGED_IN_SALT",
+        "body": "LOGGED_IN_SALT",
+        "description": ""
+    },
+    "MEDIA_TRASH": {
+        "prefix": "_MEDIA_TRASH",
+        "body": "MEDIA_TRASH",
+        "description": ""
+    },
+    "MINUTE_IN_SECONDS": {
+        "prefix": "_MINUTE_IN_SECONDS",
+        "body": "MINUTE_IN_SECONDS",
+        "description": ""
+    },
+    "MULTISITE": {
+        "prefix": "_MULTISITE",
+        "body": "MULTISITE",
+        "description": ""
+    },
+    "MUPLUGINDIR": {
+        "prefix": "_MUPLUGINDIR",
+        "body": "MUPLUGINDIR",
+        "description": ""
+    },
+    "NOBLOGREDIRECT": {
+        "prefix": "_NOBLOGREDIRECT",
+        "body": "NOBLOGREDIRECT",
+        "description": ""
+    },
+    "NONCE_KEY": {
+        "prefix": "_NONCE_KEY",
+        "body": "NONCE_KEY",
+        "description": ""
+    },
+    "NONCE_SALT": {
+        "prefix": "_NONCE_SALT",
+        "body": "NONCE_SALT",
+        "description": ""
+    },
+    "OBJECT": {
+        "prefix": "_OBJECT",
+        "body": "OBJECT",
+        "description": ""
+    },
+    "OBJECT_K": {
+        "prefix": "_OBJECT_K",
+        "body": "OBJECT_K",
+        "description": ""
+    },
+    "PASS_COOKIE": {
+        "prefix": "_PASS_COOKIE",
+        "body": "PASS_COOKIE",
+        "description": ""
+    },
+    "PATH_CURRENT_SITE": {
+        "prefix": "_PATH_CURRENT_SITE",
+        "body": "PATH_CURRENT_SITE",
+        "description": ""
+    },
+    "PLUGINDIR": {
+        "prefix": "_PLUGINDIR",
+        "body": "PLUGINDIR",
+        "description": ""
+    },
+    "PLUGINS_COOKIE_PATH": {
+        "prefix": "_PLUGINS_COOKIE_PATH",
+        "body": "PLUGINS_COOKIE_PATH",
+        "description": ""
+    },
+    "SAVEQUERIES": {
+        "prefix": "_SAVEQUERIES",
+        "body": "SAVEQUERIES",
+        "description": ""
+    },
+    "SCRIPT_DEBUG": {
+        "prefix": "_SCRIPT_DEBUG",
+        "body": "SCRIPT_DEBUG",
+        "description": ""
+    },
+    "SECURE_AUTH_COOKIE": {
+        "prefix": "_SECURE_AUTH_COOKIE",
+        "body": "SECURE_AUTH_COOKIE",
+        "description": ""
+    },
+    "SECURE_AUTH_KEY": {
+        "prefix": "_SECURE_AUTH_KEY",
+        "body": "SECURE_AUTH_KEY",
+        "description": ""
+    },
+    "SECURE_AUTH_SALT": {
+        "prefix": "_SECURE_AUTH_SALT",
+        "body": "SECURE_AUTH_SALT",
+        "description": ""
+    },
+    "SHORTINIT": {
+        "prefix": "_SHORTINIT",
+        "body": "SHORTINIT",
+        "description": ""
+    },
+    "SITE_ID_CURRENT_SITE": {
+        "prefix": "_SITE_ID_CURRENT_SITE",
+        "body": "SITE_ID_CURRENT_SITE",
+        "description": ""
+    },
+    "SITECOOKIEPATH": {
+        "prefix": "_SITECOOKIEPATH",
+        "body": "SITECOOKIEPATH",
+        "description": ""
+    },
+    "STYLESHEETPATH": {
+        "prefix": "_STYLESHEETPATH",
+        "body": "STYLESHEETPATH",
+        "description": ""
+    },
+    "SUBDOMAIN_INSTALL": {
+        "prefix": "_SUBDOMAIN_INSTALL",
+        "body": "SUBDOMAIN_INSTALL",
+        "description": ""
+    },
+    "SUNRISE": {
+        "prefix": "_SUNRISE",
+        "body": "SUNRISE",
+        "description": ""
+    },
+    "TEMPLATEPATH": {
+        "prefix": "_TEMPLATEPATH",
+        "body": "TEMPLATEPATH",
+        "description": ""
+    },
+    "TEST_COOKIE": {
+        "prefix": "_TEST_COOKIE",
+        "body": "TEST_COOKIE",
+        "description": ""
+    },
+    "UPLOADBLOGSDIR": {
+        "prefix": "_UPLOADBLOGSDIR",
+        "body": "UPLOADBLOGSDIR",
+        "description": ""
+    },
+    "UPLOADS": {
+        "prefix": "_UPLOADS",
+        "body": "UPLOADS",
+        "description": ""
+    },
+    "USER_COOKIE": {
+        "prefix": "_USER_COOKIE",
+        "body": "USER_COOKIE",
+        "description": ""
+    },
+    "VHOST": {
+        "prefix": "_VHOST",
+        "body": "VHOST",
+        "description": ""
+    },
+    "WEEK_IN_SECONDS": {
+        "prefix": "_WEEK_IN_SECONDS",
+        "body": "WEEK_IN_SECONDS",
+        "description": ""
+    },
+    "WP_ADMIN": {
+        "prefix": "_WP_ADMIN",
+        "body": "WP_ADMIN",
+        "description": ""
+    },
+    "WP_ALLOW_MULTISITE": {
+        "prefix": "_WP_ALLOW_MULTISITE",
+        "body": "WP_ALLOW_MULTISITE",
+        "description": ""
+    },
+    "WP_ALLOW_REPAIR": {
+        "prefix": "_WP_ALLOW_REPAIR",
+        "body": "WP_ALLOW_REPAIR",
+        "description": ""
+    },
+    "WP_CACHE": {
+        "prefix": "_WP_CACHE",
+        "body": "WP_CACHE",
+        "description": ""
+    },
+    "WP_CONTENT_DIR": {
+        "prefix": "_WP_CONTENT_DIR",
+        "body": "WP_CONTENT_DIR",
+        "description": ""
+    },
+    "WP_CONTENT_URL": {
+        "prefix": "_WP_CONTENT_URL",
+        "body": "WP_CONTENT_URL",
+        "description": ""
+    },
+    "WP_CRON_LOCK_TIMEOUT": {
+        "prefix": "_WP_CRON_LOCK_TIMEOUT",
+        "body": "WP_CRON_LOCK_TIMEOUT",
+        "description": ""
+    },
+    "WP_DEBUG": {
+        "prefix": "_WP_DEBUG",
+        "body": "WP_DEBUG",
+        "description": ""
+    },
+    "WP_DEBUG_DISPLAY": {
+        "prefix": "_WP_DEBUG_DISPLAY",
+        "body": "WP_DEBUG_DISPLAY",
+        "description": ""
+    },
+    "WP_DEBUG_LOG": {
+        "prefix": "_WP_DEBUG_LOG",
+        "body": "WP_DEBUG_LOG",
+        "description": ""
+    },
+    "WP_DEFAULT_THEME": {
+        "prefix": "_WP_DEFAULT_THEME",
+        "body": "WP_DEFAULT_THEME",
+        "description": ""
+    },
+    "WP_HOME": {
+        "prefix": "_WP_HOME",
+        "body": "WP_HOME",
+        "description": ""
+    },
+    "WP_IMPORTING": {
+        "prefix": "_WP_IMPORTING",
+        "body": "WP_IMPORTING",
+        "description": ""
+    },
+    "WP_INSTALLING": {
+        "prefix": "_WP_INSTALLING",
+        "body": "WP_INSTALLING",
+        "description": ""
+    },
+    "WP_LANG_DIR": {
+        "prefix": "_WP_LANG_DIR",
+        "body": "WP_LANG_DIR",
+        "description": ""
+    },
+    "WP_MAX_MEMORY_LIMIT": {
+        "prefix": "_WP_MAX_MEMORY_LIMIT",
+        "body": "WP_MAX_MEMORY_LIMIT",
+        "description": ""
+    },
+    "WP_MEMORY_LIMIT": {
+        "prefix": "_WP_MEMORY_LIMIT",
+        "body": "WP_MEMORY_LIMIT",
+        "description": ""
+    },
+    "WP_NETWORK_ADMIN": {
+        "prefix": "_WP_NETWORK_ADMIN",
+        "body": "WP_NETWORK_ADMIN",
+        "description": ""
+    },
+    "WP_NETWORK_ADMIN_PAGE": {
+        "prefix": "_WP_NETWORK_ADMIN_PAGE",
+        "body": "WP_NETWORK_ADMIN_PAGE",
+        "description": ""
+    },
+    "WP_PLUGIN_DIR": {
+        "prefix": "_WP_PLUGIN_DIR",
+        "body": "WP_PLUGIN_DIR",
+        "description": ""
+    },
+    "WP_PLUGIN_URL": {
+        "prefix": "_WP_PLUGIN_URL",
+        "body": "WP_PLUGIN_URL",
+        "description": ""
+    },
+    "WP_POST_REVISIONS": {
+        "prefix": "_WP_POST_REVISIONS",
+        "body": "WP_POST_REVISIONS",
+        "description": ""
+    },
+    "WP_SITEURL": {
+        "prefix": "_WP_SITEURL",
+        "body": "WP_SITEURL",
+        "description": ""
+    },
+    "WP_USER_ADMIN": {
+        "prefix": "_WP_USER_ADMIN",
+        "body": "WP_USER_ADMIN",
+        "description": ""
+    },
+    "WPINC": {
+        "prefix": "_WPINC",
+        "body": "WPINC",
+        "description": ""
+    },
+    "WPLANG": {
+        "prefix": "_WPLANG",
+        "body": "WPLANG",
+        "description": ""
+    },
+    "WPMU_ACCEL_REDIRECT": {
+        "prefix": "_WPMU_ACCEL_REDIRECT",
+        "body": "WPMU_ACCEL_REDIRECT",
+        "description": ""
+    },
+    "WPMU_PLUGIN_DIR": {
+        "prefix": "_WPMU_PLUGIN_DIR",
+        "body": "WPMU_PLUGIN_DIR",
+        "description": ""
+    },
+    "WPMU_PLUGIN_URL": {
+        "prefix": "_WPMU_PLUGIN_URL",
+        "body": "WPMU_PLUGIN_URL",
+        "description": ""
+    },
+    "WPMU_SENDFILE": {
+        "prefix": "_WPMU_SENDFILE",
+        "body": "WPMU_SENDFILE",
+        "description": ""
+    },
+    "WXR_VERSION": {
+        "prefix": "_WXR_VERSION",
+        "body": "WXR_VERSION",
+        "description": ""
+    },
+    "YEAR_IN_SECONDS": {
+        "prefix": "_YEAR_IN_SECONDS",
+        "body": "YEAR_IN_SECONDS",
+        "description": ""
+    },
+    "_WP_Dependency": {
+        "prefix": "__WP_Dependency",
+        "body": "_WP_Dependency",
+        "description": ""
+    },
+    "_WP_List_Table_Compat": {
+        "prefix": "__WP_List_Table_Compat",
+        "body": "_WP_List_Table_Compat",
+        "description": ""
+    },
+    "Gettext_Translations": {
+        "prefix": "_Gettext_Translations",
+        "body": "Gettext_Translations",
+        "description": ""
+    },
+    "MO": {
+        "prefix": "_MO",
+        "body": "MO",
+        "description": ""
+    },
+    "NOOP_Translations": {
+        "prefix": "_NOOP_Translations",
+        "body": "NOOP_Translations",
+        "description": ""
+    },
+    "POMO_CachedFileReader": {
+        "prefix": "_POMO_CachedFileReader",
+        "body": "POMO_CachedFileReader",
+        "description": ""
+    },
+    "POMO_CachedIntFileReader": {
+        "prefix": "_POMO_CachedIntFileReader",
+        "body": "POMO_CachedIntFileReader",
+        "description": ""
+    },
+    "POMO_FileReader": {
+        "prefix": "_POMO_FileReader",
+        "body": "POMO_FileReader",
+        "description": ""
+    },
+    "POMO_Reader": {
+        "prefix": "_POMO_Reader",
+        "body": "POMO_Reader",
+        "description": ""
+    },
+    "POMO_StringReader": {
+        "prefix": "_POMO_StringReader",
+        "body": "POMO_StringReader",
+        "description": ""
+    },
+    "Translation_Entry": {
+        "prefix": "_Translation_Entry",
+        "body": "Translation_Entry",
+        "description": ""
+    },
+    "Translations": {
+        "prefix": "_Translations",
+        "body": "Translations",
+        "description": ""
+    },
+    "Walker": {
+        "prefix": "_Walker",
+        "body": "Walker",
+        "description": ""
+    },
+    "Walker_Category": {
+        "prefix": "_Walker_Category",
+        "body": "Walker_Category",
+        "description": ""
+    },
+    "Walker_Category_Checklist": {
+        "prefix": "_Walker_Category_Checklist",
+        "body": "Walker_Category_Checklist",
+        "description": ""
+    },
+    "Walker_CategoryDropdown": {
+        "prefix": "_Walker_CategoryDropdown",
+        "body": "Walker_CategoryDropdown",
+        "description": ""
+    },
+    "Walker_Comment": {
+        "prefix": "_Walker_Comment",
+        "body": "Walker_Comment",
+        "description": ""
+    },
+    "Walker_Nav_Menu": {
+        "prefix": "_Walker_Nav_Menu",
+        "body": "Walker_Nav_Menu(${0:\\$args})",
+        "description": ""
+    },
+    "Walker_Page": {
+        "prefix": "_Walker_Page",
+        "body": "Walker_Page",
+        "description": ""
+    },
+    "Walker_PageDropdown": {
+        "prefix": "_Walker_PageDropdown",
+        "body": "Walker_PageDropdown",
+        "description": ""
+    },
+    "WP": {
+        "prefix": "_WP",
+        "body": "WP",
+        "description": ""
+    },
+    "WP_Ajax_Response": {
+        "prefix": "_WP_Ajax_Response",
+        "body": "WP_Ajax_Response",
+        "description": ""
+    },
+    "WP_Automatic_Updater": {
+        "prefix": "_WP_Automatic_Updater",
+        "body": "WP_Automatic_Updater",
+        "description": ""
+    },
+    "WP_Comment_Query": {
+        "prefix": "_WP_Comment_Query",
+        "body": "WP_Comment_Query",
+        "description": ""
+    },
+    "WP_Date_Query": {
+        "prefix": "_WP_Date_Query",
+        "body": "WP_Date_Query",
+        "description": ""
+    },
+    "WP_Dependencies": {
+        "prefix": "_WP_Dependencies",
+        "body": "WP_Dependencies",
+        "description": ""
+    },
+    "WP_Embed": {
+        "prefix": "_WP_Embed",
+        "body": "WP_Embed",
+        "description": ""
+    },
+    "WP_Error": {
+        "prefix": "_WP_Error",
+        "body": "WP_Error",
+        "description": ""
+    },
+    "WP_Http": {
+        "prefix": "_WP_Http",
+        "body": "WP_Http",
+        "description": ""
+    },
+    "WP_Http_Cookie": {
+        "prefix": "_WP_Http_Cookie",
+        "body": "WP_Http_Cookie",
+        "description": ""
+    },
+    "WP_Http_Curl": {
+        "prefix": "_WP_Http_Curl",
+        "body": "WP_Http_Curl",
+        "description": ""
+    },
+    "WP_Http_Encoding": {
+        "prefix": "_WP_Http_Encoding",
+        "body": "WP_Http_Encoding",
+        "description": ""
+    },
+    "WP_Http_Fsockopen": {
+        "prefix": "_WP_Http_Fsockopen",
+        "body": "WP_Http_Fsockopen",
+        "description": ""
+    },
+    "WP_HTTP_Proxy": {
+        "prefix": "_WP_HTTP_Proxy",
+        "body": "WP_HTTP_Proxy",
+        "description": ""
+    },
+    "WP_Http_Streams": {
+        "prefix": "_WP_Http_Streams",
+        "body": "WP_Http_Streams",
+        "description": ""
+    },
+    "WP_Internal_Pointers": {
+        "prefix": "_WP_Internal_Pointers",
+        "body": "WP_Internal_Pointers",
+        "description": ""
+    },
+    "WP_List_Table": {
+        "prefix": "_WP_List_Table",
+        "body": "WP_List_Table",
+        "description": ""
+    },
+    "WP_Locale": {
+        "prefix": "_WP_Locale",
+        "body": "WP_Locale",
+        "description": ""
+    },
+    "WP_MatchesMapRegex": {
+        "prefix": "_WP_MatchesMapRegex",
+        "body": "WP_MatchesMapRegex",
+        "description": ""
+    },
+    "WP_Meta_Query": {
+        "prefix": "_WP_Meta_Query",
+        "body": "WP_Meta_Query",
+        "description": ""
+    },
+    "WP_Nav_Menu_Widget": {
+        "prefix": "_WP_Nav_Menu_Widget",
+        "body": "WP_Nav_Menu_Widget",
+        "description": ""
+    },
+    "WP_Object_Cache": {
+        "prefix": "_WP_Object_Cache",
+        "body": "WP_Object_Cache",
+        "description": ""
+    },
+    "WP_Post": {
+        "prefix": "_WP_Post",
+        "body": "WP_Post(${0:\\$args})",
+        "description": ""
+    },
+    "WP_Query": {
+        "prefix": "_WP_Query",
+        "body": "WP_Query(${0:\\$args})",
+        "description": ""
+    },
+    "WP_Rewrite": {
+        "prefix": "_WP_Rewrite",
+        "body": "WP_Rewrite",
+        "description": ""
+    },
+    "WP_Role": {
+        "prefix": "_WP_Role",
+        "body": "WP_Role",
+        "description": ""
+    },
+    "WP_Roles": {
+        "prefix": "_WP_Roles",
+        "body": "WP_Roles",
+        "description": ""
+    },
+    "WP_Screen": {
+        "prefix": "_WP_Screen",
+        "body": "WP_Screen",
+        "description": ""
+    },
+    "WP_Scripts": {
+        "prefix": "_WP_Scripts",
+        "body": "WP_Scripts",
+        "description": ""
+    },
+    "WP_Styles": {
+        "prefix": "_WP_Styles",
+        "body": "WP_Styles",
+        "description": ""
+    },
+    "WP_Tax_Query": {
+        "prefix": "_WP_Tax_Query",
+        "body": "WP_Tax_Query",
+        "description": ""
+    },
+    "WP_Theme": {
+        "prefix": "_WP_Theme",
+        "body": "WP_Theme",
+        "description": ""
+    },
+    "WP_User": {
+        "prefix": "_WP_User",
+        "body": "WP_User",
+        "description": ""
+    },
+    "WP_User_Query": {
+        "prefix": "_WP_User_Query",
+        "body": "WP_User_Query",
+        "description": ""
+    },
+    "WP_User_Search": {
+        "prefix": "_WP_User_Search",
+        "body": "WP_User_Search",
+        "description": ""
+    },
+    "WP_Widget": {
+        "prefix": "_WP_Widget",
+        "body": "WP_Widget",
+        "description": ""
+    },
+    "WP_Widget_Archives": {
+        "prefix": "_WP_Widget_Archives",
+        "body": "WP_Widget_Archives",
+        "description": ""
+    },
+    "WP_Widget_Calendar": {
+        "prefix": "_WP_Widget_Calendar",
+        "body": "WP_Widget_Calendar",
+        "description": ""
+    },
+    "WP_Widget_Categories": {
+        "prefix": "_WP_Widget_Categories",
+        "body": "WP_Widget_Categories",
+        "description": ""
+    },
+    "WP_Widget_Factory": {
+        "prefix": "_WP_Widget_Factory",
+        "body": "WP_Widget_Factory",
+        "description": ""
+    },
+    "WP_Widget_Links": {
+        "prefix": "_WP_Widget_Links",
+        "body": "WP_Widget_Links",
+        "description": ""
+    },
+    "WP_Widget_Meta": {
+        "prefix": "_WP_Widget_Meta",
+        "body": "WP_Widget_Meta",
+        "description": ""
+    },
+    "WP_Widget_Pages": {
+        "prefix": "_WP_Widget_Pages",
+        "body": "WP_Widget_Pages",
+        "description": ""
+    },
+    "WP_Widget_Recent_Comments": {
+        "prefix": "_WP_Widget_Recent_Comments",
+        "body": "WP_Widget_Recent_Comments",
+        "description": ""
+    },
+    "WP_Widget_Recent_Posts": {
+        "prefix": "_WP_Widget_Recent_Posts",
+        "body": "WP_Widget_Recent_Posts",
+        "description": ""
+    },
+    "WP_Widget_RSS": {
+        "prefix": "_WP_Widget_RSS",
+        "body": "WP_Widget_RSS",
+        "description": ""
+    },
+    "WP_Widget_Search": {
+        "prefix": "_WP_Widget_Search",
+        "body": "WP_Widget_Search",
+        "description": ""
+    },
+    "WP_Widget_Tag_Cloud": {
+        "prefix": "_WP_Widget_Tag_Cloud",
+        "body": "WP_Widget_Tag_Cloud",
+        "description": ""
+    },
+    "WP_Widget_Text": {
+        "prefix": "_WP_Widget_Text",
+        "body": "WP_Widget_Text",
+        "description": ""
+    },
+    "wpdb": {
+        "prefix": "_wpdb",
+        "body": "wpdb",
+        "description": ""
+    },
+}
