@@ -54,6 +54,14 @@
       {
         "language": "",
         "path": "./snippets/sass.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/wp.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/wp_class_and_constants.code-snippets"
       }
     ]
   },

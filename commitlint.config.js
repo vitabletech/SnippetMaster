@@ -13,6 +13,7 @@ module.exports = {
           'test',
           'enhancement',
           'feature',
+          'added',
         ],
       ],
     },
