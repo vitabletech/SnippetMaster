@@ -1,0 +1,77 @@
+{
+  "customize_or_remove_admin_footer": {
+    "prefix": "custom_remove_admin_footer",
+    "body": "add_filter( 'admin_footer_text', 'remove_footer_admin_version', 10, 1 );\n\nfunction remove_footer_admin_version( $footer_text ) {\n    return 'Developed by VitableTech';\n}",
+    "description": "Remove version information from admin footer and display custom text."
+  },
+  "customize_or_remove_admin_bar_comments": {
+    "prefix": "custom_remove_admin_bar_comments",
+    "body": "add_action('admin_bar_menu', fn ($wp_admin_bar) => $wp_admin_bar->remove_node('comments'), 999);",
+    "description": "Remove comments from the admin bar."
+  },
+  "hide_admin_bar": {
+    "prefix": "hide_admin_bar",
+    "body": "add_filter('show_admin_bar', '__return_false');",
+    "description": "Hide the admin bar."
+  },
+  "custom_admin_footer_text": {
+    "prefix": "custom_admin_footer_text",
+    "body": "add_filter('admin_footer_text', fn () => 'Developed by VitableTech');",
+    "description": "Add custom footer text to the admin area."
+  },
+  "remove_wordpress_version_footer": {
+    "prefix": "remove_wordpress_version_footer",
+    "body": "add_action('admin_menu', fn () => remove_filter('update_footer', 'core_update_footer'));",
+    "description": "Remove the update footer or Default wordpress version from the admin area."
+  },
+  "remove_screen_options": {
+    "prefix": "remove_screen_options",
+    "body": "add_filter('screen_options_show_screen', fn () => current_user_can('manage_options'));",
+    "description": "Show screen options based on user capability. It mean by super admin current_user_can('manage_options')"
+  },
+  "hide_screen_options": {
+    "prefix": "hide_screen_options",
+    "body": "add_action('admin_head', function () {\n    if (current_user_can('manage_options')) return false;\n    $screen = get_current_screen();\n    $screen->remove_help_tabs();\n});",
+    "description": "Hide screen options for all users except super admin."
+  },
+  "change_admin_bar_title": {
+    "prefix": "change_admin_bar_title",
+    "body": "add_filter('admin_bar_menu', 'howdy_to_hello', 25);\n\nfunction howdy_to_hello($wp_admin_bar) {\n    $my_account = $wp_admin_bar->get_node('my-account');\n    $newtitle = str_replace('Howdy,', 'Hello!', $my_account->title);\n    $wp_admin_bar->add_node(array(\n        'id' => 'my-account',\n        'title' => $newtitle,\n    ));\n}",
+    "description": "Change the welcome title in the top bar of the admin area from 'Howdy' to 'Hello'."
+  },
+  "remove_new_button_from_admin": {
+    "prefix": "remove_new_button_admin",
+    "body": "add_action('admin_bar_menu', function () {\n    global $wp_admin_bar;\n    if (!current_user_can('manage_options')) {\n        $wp_admin_bar->remove_node('new-content');\n    }\n}, 999);",
+    "description": "Remove the '+ New' button from the top bar in the admin site."
+  },
+  "remove_wordpress_logo": {
+    "prefix": "remove_wordpress_logo",
+    "body": "add_action('wp_before_admin_bar_render', function () {\n    global $wp_admin_bar;\n    $wp_admin_bar->remove_node('wp-logo');\n});",
+    "description": "Remove the WordPress logo from the admin bar."
+  },
+  "restrict_user_access": {
+    "prefix": "restrict_user_access",
+    "body": "add_action('admin_init', function () {\n    if (!is_user_logged_in()) return false;\n    $user = wp_get_current_user();\n    $user_roles = $user->roles;\n\n    // Define the restricted URLs\n    $restricted_urls = array(\n        '/wp-admin/edit.php?post_type=elementor_library&tabs_group=library',\n        '/wp-admin/post-new.php?post_type=elementor_library'\n    );\n    // Check if the user has the 'employee' role\n    if (in_array('wpcargo_employee', $user_roles) && in_array($_SERVER['REQUEST_URI'], $restricted_urls)) {\n        wp_redirect(home_url()); // Replace 'home_url()' with the URL you want to redirect non-employees to\n        exit;\n    }\n});",
+    "description": "Restrict user access to specific pages based on their role."
+  },
+  "custom_restrict_admin_menus": {
+    "prefix": "custom_restrict_admin_menus",
+    "body": "add_action('admin_menu', function () {\n    if (current_user_can('manage_options')) return false;\n    $restricted_menus = array(\n        'edit.php',                      // Posts\n        'upload.php',                    // Media\n        'edit-comments.php',             // Comments\n        'themes.php',                    // Appearance\n        'plugins.php',                   // Plugins\n        'tools.php',                     // Tools\n        'options-general.php',           // Settings\n        'edit.php?post_type=elementor_library' //templates\n    );\n    foreach ($restricted_menus as $menu) remove_menu_page($menu);\n});",
+    "description": "Restrict specific admin menus for non-admin users."
+  },
+  "custom_ninja_forms_permissions": {
+    "prefix": "custom_ninja_forms_submissions_permissions",
+    "body": "if (current_user_can(\"wpcargo_employee\")) {\n    /**\n     * Ninja From customization allow submissions to other users\n     */\n    $nf_subs_capabilities = fn () => 'edit_posts';\n    add_filter('ninja_forms_admin_submissions_capabilities', $nf_subs_capabilities); // Submissions Submenu\n\n    /**\n     * Filter hook used in the API route permission callback to retrieve submissions\n     * return bool as for authorized or not.\n     */\n\n    $nf_define_permission_level = fn () => current_user_can(\"wpcargo_employee\");\n\n    add_filter('ninja_forms_api_allow_get_submissions', $nf_define_permission_level, 10, 2);\n    add_filter('ninja_forms_api_allow_delete_submissions', $nf_define_permission_level, 10, 2);\n    add_filter('ninja_forms_api_allow_update_submission', $nf_define_permission_level, 10, 2);\n    add_filter('ninja_forms_api_allow_handle_extra_submission', $nf_define_permission_level, 10, 2);\n    add_filter('ninja_forms_api_allow_email_action', $nf_define_permission_level, 10, 2);\n}",
+    "description": "Customize permissions for Ninja Forms submissions based on user capabilities."
+  },
+  "custom_ninja_forms_all_menus_permissions": {
+    "prefix": "custom_ninja_forms_all_permissions",
+    "body": "// Must use all three filters for this to work properly.\nadd_filter( 'ninja_forms_admin_parent_menu_capabilities',   'nf_subs_capabilities' ); // Parent Menu\nadd_filter( 'ninja_forms_admin_all_forms_capabilities',     'nf_subs_capabilities' ); // Forms Submenu\nadd_filter( 'ninja_forms_admin_submissions_capabilities',   'nf_subs_capabilities' ); // Submissions Submenu\n\nfunction nf_subs_capabilities( $cap ) {\n    return 'edit_posts'; // EDIT: User Capability\n}\n\n/**\n * Filter hook used in the API route permission callback to retrieve submissions\n *\n * return bool as for authorized or not.\n */\nadd_filter( 'ninja_forms_api_allow_get_submissions', 'nf_define_permission_level', 10, 2 );\nadd_filter( 'ninja_forms_api_allow_delete_submissions', 'nf_define_permission_level', 10, 2 );\nadd_filter( 'ninja_forms_api_allow_update_submission', 'nf_define_permission_level', 10, 2 );\nadd_filter( 'ninja_forms_api_allow_handle_extra_submission', 'nf_define_permission_level', 10, 2 );\nadd_filter( 'ninja_forms_api_allow_email_action', 'nf_define_permission_level', 10, 2 );\n\nfunction nf_define_permission_level() {\n  \n  $allowed = \\current_user_can(\"delete_others_posts\");\n  \n  return $allowed;\n}",
+    "description": "Customize permissions for Ninja Forms admin menus and API actions based on user capabilities. By default Ninja Forms is only accessible by an Administrator account. This is overwhelmingly the desired behavior but on some occasions, you may want Ninja Forms to be able to be accessed by a lesser role within your account.One situation where this occurs is when you are developing a site for a client and you give them only editor permissions so they don’t access things that could potentially break their site. You still want them to be able to create and manage their own forms but not give them full administrator access. Luckily that’s very easy to accomplish. As of Ninja Forms > 3.6, additional permissions need to be set for users that are not admin level to access and manage submissions data. They are to be used in combination with the filter hooks mentioned above."
+  },
+  "create_child_theme": {
+    "prefix": "create_child_theme",
+    "body": "add_action('wp_enqueue_scripts', function () {\n    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');\n    wp_enqueue_style('write you child theme name any', get_stylesheet_uri());\n});\n\nadd_filter('moving_company_lite_credit', fn () => false);",
+    "description": "Enqueue child theme styles and disable the credit link in Moving Company Lite theme."
+  }
+}

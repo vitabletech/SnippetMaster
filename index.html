@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Snippet Master</title>
-    <meta name="name" content="All in one snippetmaster">
-    <meta name="description" content="A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.">
-    <meta name="keywords" content="visual-studio-code, vscode, All in One Snippet Master, python, react, react development, windows commands, wordpress developer, wordpress code snippets, laravel developer, wordpress plugin, wordpress code snippet plugin, shell or linux commands, linux, snippet, code-snippets, custom-snippets, web-development, php, javascript, html, css, msrajawat298, vitabletech, SnippetMaster, CodeBoost, CodeHelper, CodeNexus, SnipAssist, CodeFuse, SnipPilot, CodeWise, SnipCraft">
-    <meta name="author" content="Mayank singh Kushwah">
-    <meta name="publisher" content="vitabletech">
-    <meta name="application-name" content="All in One Snippet Master">
-    <meta name="version" content="1.1.0">
-    <meta name="license" content="MIT">
+    <meta name="name" content="All in one snippetmaster" />
+    <meta
+      name="description"
+      content="A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets."
+    />
+    <meta
+      name="keywords"
+      content="visual-studio-code, vscode, All in One Snippet Master, python, react, react development, windows commands, wordpress developer, wordpress code snippets, laravel developer, wordpress plugin, wordpress code snippet plugin, shell or linux commands, linux, snippet, code-snippets, custom-snippets, web-development, php, javascript, html, css, msrajawat298, vitabletech, SnippetMaster, CodeBoost, CodeHelper, CodeNexus, SnipAssist, CodeFuse, SnipPilot, CodeWise, SnipCraft"
+    />
+    <meta name="author" content="Mayank singh Kushwah" />
+    <meta name="publisher" content="vitabletech" />
+    <meta name="application-name" content="All in One Snippet Master" />
+    <meta name="version" content="1.1.0" />
+    <meta name="license" content="MIT" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -52,7 +58,9 @@
           <hr />
           <h3>Information:</h3>
           <ul>
-            <li><strong>Extension Name:</strong> <span id="displayName"></span></li>
+            <li>
+              <strong>Extension Name:</strong> <span id="displayName"></span>
+            </li>
             <li><strong>Latest Version:</strong> <span id="version"></span></li>
             <li><strong>Publisher:</strong> <span id="publisher"></span></li>
             <li><strong>Author:</strong> <span id="author"></span></li>
@@ -74,8 +82,17 @@
                 and snippets.
               </li>
               <li>
-                Supports multiple programming languages <span class="badge badge-primary">PHP</span>  <span class="badge badge-warning text-dark">JavaScript </span> <span class="badge badge-danger">CSS</span>  <span class="badge badge-info"> SASS</span> <span class="badge badge-secondary"> Shell, linux commands</span>
-                <span class="badge badge-success"> Other windows commands other general useful</span>
+                Supports multiple programming languages
+                <span class="badge badge-primary">PHP</span>
+                <span class="badge badge-warning text-dark">JavaScript </span>
+                <span class="badge badge-danger">CSS</span>
+                <span class="badge badge-info"> SASS</span>
+                <span class="badge badge-secondary">
+                  Shell, linux commands</span
+                >
+                <span class="badge badge-success">
+                  Other windows commands other general useful</span
+                >
               </li>
               <li>Easy to use and install in Visual Studio Code.</li>
               <li>Open source with a permissive MIT license.</li>
@@ -84,67 +101,79 @@
             <ul>
               <li>wordpress</li>
               <li>laravel</li>
-              <li>React</li> 
+              <li>React</li>
               <li>Anugalr</li>
-              <li>Python </li>
+              <li>Python</li>
             </ul>
           </div>
-          <div class="col-md-12 mt-5 table-responsive">
-            <h3>Snippets Description Table:</h3>
-            <hr />
+        </div>
+        <div class="col-md-10 mx-auto mt-3">
+          <h3>Snippets Description Table:</h3>
+          <hr />
+          <div class="table-responsive">
             <table id="snippets-table" class="table">
               <thead>
                 <tr>
+                  <th style="width: 20px !important;">Language</th>
                   <th>Name</th>
                   <th>Prefix</th>
                   <th>Description</th>
-                  <th>Language</th>
                 </tr>
               </thead>
-              <tbody id="table-body"></tbody>
+              <tbody id="table-body" class="d-none"></tbody>
             </table>
-          </div>
-          <div class="col-md-12 mt-5 table-responsive">
-            <h2>Tutorial</h2>
-            <p>
-              Want to learn how to use it? Check out the tutorial
-              <a href="https://youtu.be/eG5Na0KTGH0">here</a>.
-            </p>
-            <h2>Rate Us</h2>
-            <p>
-              If you've already tried it, please do rate us on the Marketplace
-              <a
-                href="https://marketplace.visualstudio.com/items?itemName=vitabletech.snippetmaster&amp;ssr=false#review-details"
-                >here</a
-              >.
-            </p>
-            <h2>More Info</h2>
-            <p>
-              Want to know more about the importance of SnippetMaster? Check out this video
-              <a href="https://youtu.be/gEW9eqBYod8">here</a>.
-            </p>
-            <h2>KT Session</h2>
-            <p>
-              For a KT session on how to use it effectively, watch this video
-              <a href="https://youtu.be/SjAkQXMdZqo">here</a>.
-            </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="b-example-divider"></div>
     <!-- Footer Section -->
-    <footer>
-      <div class="container text-center mt-3">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-              &copy; <span id="year"></span> SnippetMaster by
-              <span id="company_name"></span>. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+<div class="container">
+  <footer class="row pt-5 mt-5 border-top">
+    <div class="col-12 col-lg-6">
+      <h5>Tutorial</h5>
+      <p>
+        Want to know more about the importance of SnippetMaster? Check out this video
+        <a href="https://youtu.be/gEW9eqBYod8">here</a>.
+      </p>
+      <p>
+        Want to learn how to use it? Check out the tutorial
+        <a href="https://youtu.be/eG5Na0KTGH0">here</a>.
+      </p>
+      <p>
+        A Step-by-Step Guide Contribute to SnippetMaster
+        <a href="https://youtu.be/k2jzIYUEt_Y">here</a>.
+      </p>
+      <p>
+        Git Workflow Tutorial: Releasing and Merging Changes <a href="https://youtu.be/po_mYhXvDBk">here</a>.
+      </p>
+      <p>
+        For a KT session on how to use it effectively, watch this video
+        <a href="https://youtu.be/SjAkQXMdZqo">here</a>.
+      </p>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <h5>Rate Us</h5>
+      <p>
+        If you've already tried it, please do rate us on the Marketplace
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=vitabletech.snippetmaster&amp;ssr=false#review-details"
+          >here</a>
+      </p>
+    </div>
+  </footer>
+</div>
+<div class="container-fluid pt-3 text-center bg-dark text-white">
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        &copy; <span id="year"></span> SnippetMaster by
+        <span id="company_name"></span>. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</div>
     <!-- Bootstrap 5 JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -174,7 +203,7 @@
           for (const [key, value] of Object.entries(
             data?.contributes?.snippets
           )) {
-            if (value.path !== "") {
+            if (value.path) {
               const result = await $.getJSON(value.path);
               if (result) {
                 for (const [
@@ -196,10 +225,13 @@
                   // Add the row to the HTML for the table
                   tableHtml += `
               <tr>
+                <td>${value.path
+                  .split(".code-snippets")[0]
+                  .split("/")
+                  .pop()}</td>
                 <td>${snippetsName}</td>
                 <td>${snippetsDescription.prefix}</td>
                 <td>${description}</td>
-                <td>${value.path.split(".code-snippets")[0].split("/").pop()}</td>
               </tr>
             `;
                 }
@@ -208,7 +240,9 @@
               }
             }
           }
-          $("#snippets-table").DataTable();
+          $("#snippets-table").DataTable({
+            initComplete: () => $("#table-body").removeClass("d-none"),
+          });
         } catch (error) {
           console.error("Failed to load package.json", error);
         }
