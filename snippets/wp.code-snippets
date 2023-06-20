@@ -13437,11 +13437,6 @@
     "body": "zeroise(${1:\\$number}, ${2:\\$threshold})",
     "description": "Add leading zeros when necessary."
   },
-  "_": {
-    "prefix": "__",
-    "body": "_(${1:\\$string})",
-    "description": ""
-  },
   "_access_denied_splash": {
     "prefix": "__access_denied_splash",
     "body": "_access_denied_splash()",
@@ -14441,11 +14436,6 @@
     "prefix": "__xmlrpc_wp_die_handler",
     "body": "_xmlrpc_wp_die_handler(${1:\\$message}, ${2:\\$title}, ${3:\\$args})",
     "description": "Kill WordPress execution and display XML message with error message."
-  },
-  "__": {
-    "prefix": "___",
-    "body": "__(${1:\\$text}, ${2:\\$domain})",
-    "description": "Retrieve the translation of $text."
   },
   "__autoload": {
     "prefix": "___autoload",
