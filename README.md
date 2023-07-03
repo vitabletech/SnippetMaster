@@ -79,3 +79,6 @@ Want to know more about the importance of SnippetMaster? Check out this video [h
 
 For a KT session on how to use it effectively, watch this video [here](https://youtu.be/SjAkQXMdZqo).
 **Enjoy!**
+
+## Changelog
+[Changelog](changelog.md)
