@@ -32,30 +32,6 @@
   "contributes": {
     "snippets": [
       {
-        "language": "PHP"
-      },
-      {
-        "language": "Wordpress"
-      },
-      {
-        "language": "javaScript"
-      },
-      {
-        "language": "css"
-      },
-      {
-        "language": "Sass"
-      },
-      {
-        "language": "Sql"
-      },
-      {
-        "language": "Shell Script Commands"
-      },
-      {
-        "language": "Windows Usefull Commands"
-      },
-      {
         "language": "",
         "path": "./snippets/php.code-snippets"
       },
