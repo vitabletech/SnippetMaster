@@ -9,6 +9,16 @@
 		],
 		"description": "Outputs a human-readable representation of the $data variable."
 	},
+	"own_print_r": {
+		"prefix": "_pri",
+		"body": [
+			"echo '<br>' . __FILE__ . ' (' . __LINE__ . ')<pre> Mayank :: ';",
+			"print_r($$data);",
+			"echo '</pre>';",
+			"exit;"
+		],
+		"description": "Outputs a human-readable representation of the $data variable."
+	},
 	"var_dump": {
 		"prefix": "_var_dump",
 		"body": [

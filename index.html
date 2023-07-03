@@ -43,6 +43,45 @@
       href="favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <style>
+      .table-loader {
+        visibility: hidden;
+      }
+      .table-loader:before {
+        visibility: visible;
+        display: table-caption;
+        content: " ";
+        width: 100%;
+        height: 600px;
+        background-image: linear-gradient(
+            rgba(235, 235, 235, 1) 1px,
+            transparent 0
+          ),
+          linear-gradient(90deg, rgba(235, 235, 235, 1) 1px, transparent 0),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.5) 15%,
+            rgba(255, 255, 255, 0) 30%
+          ),
+          linear-gradient(rgba(240, 240, 242, 1) 35px, transparent 0);
+
+        background-repeat: repeat;
+
+        background-size: 1px 35px, calc(100% * 0.1666666666) 1px, 30% 100%,
+          2px 70px;
+
+        background-position: 0 0, 0 0, 0 0, 0 0;
+
+        animation: shine 0.5s infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 0 0, 0 0, 40% 0, 0 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid mt-5">
@@ -111,7 +150,7 @@
           <h3>Snippets Description Table:</h3>
           <hr />
           <div class="table-responsive">
-            <table id="snippets-table" class="table">
+            <table id="snippets-table" class="table table-loader dataTable display">
               <thead>
                 <tr>
                   <th style="width: 20px !important;">Language</th>
@@ -241,7 +280,10 @@
             }
           }
           $("#snippets-table").DataTable({
-            initComplete: () => $("#table-body").removeClass("d-none"),
+            initComplete: function () {
+              $("#snippets-table").removeClass("table-loader");
+              $("#table-body").removeClass("d-none");
+            },
           });
         } catch (error) {
           console.error("Failed to load package.json", error);
