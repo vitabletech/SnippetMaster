@@ -1,3 +1,15 @@
+## Changelog - Version 1.2.2
+
+## What's Changed
+
+- Merged code into main after Release v1.2.1 by @msrajawat298 in [Pull Request #35](https://github.com/vitabletech/SnippetMaster/pull/35)
+- Retrieved latest code from main to develop after release by @msrajawat298 in [Pull Request #37](https://github.com/vitabletech/SnippetMaster/pull/37)
+- Fixed: Dollar sign is not showing before PHP variables and added some other changes by @msrajawat298 in [Pull Request #38](https://github.com/vitabletech/SnippetMaster/pull/38)
+- Merged Develop branch changes into release branch to release the changes by @msrajawat298 in [Pull Request #39](https://github.com/vitabletech/SnippetMaster/pull/39)
+- Released v1.2.2 by @msrajawat298 in [Pull Request #40](https://github.com/vitabletech/SnippetMaster/pull/40)
+
+[**Full Changelog**](https://github.com/vitabletech/SnippetMaster/compare/v1.2.1...v1.2.2)
+
 ## Changelog - Version 1.2.1
 
 ### New Features
