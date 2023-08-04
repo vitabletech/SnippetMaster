@@ -1,3 +1,7 @@
+## Changelog - Version 1.2.3 and 1.2.4
+
+- One bug fixing and add workflow action
+
 ## Changelog - Version 1.2.2
 
 ## What's Changed
