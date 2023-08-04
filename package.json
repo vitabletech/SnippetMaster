@@ -2,7 +2,7 @@
   "name": "snippetmaster",
   "displayName": "All in One Snippet Master",
   "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "publisher": "vitabletech",
   "author": {
     "name": "Mayank singh Kushwah",
@@ -23,7 +23,7 @@
     "Snippets"
   ],
   "scripts": {
-    "postinstall": "npm install -g jsonlint && npm run husky",
+    "postinstall": "npm install -g jsonlint && npm install -g @vscode/vsce && npm run husky",
     "husky": "husky install"
   },
   "homepage": "https://vitabletech.github.io/SnippetMaster/",
