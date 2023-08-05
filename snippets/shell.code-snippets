@@ -181,5 +181,180 @@
     "prefix": "_ssh key",
     "body": ["ssh-keygen -t ed25519 -C 'your_email@example.com'"],
     "description": "Generate SSH Key"
+  },
+  "Update SSH Config": {
+    "prefix": "_update_ssh_config",
+    "body": [
+      "sudo vi /etc/ssh/ssh_config",
+      "Add these two lines at the end",
+      "HostkeyAlgorithms +ssh-rsa",
+      "PubkeyAcceptedAlgorithms +ssh-rsa"
+    ],
+    "description": "If your facing the issue to connect ssh in cmd line, its because of your system is older. For fix this issue you just need to Update SSH configuration with ssh-rsa algorithms. Update SSH configuration with ssh-rsa algorithms: Use this code snippet to add the HostkeyAlgorithms +ssh-rsa and PubkeyAcceptedAlgorithms +ssh-rsa lines at the end of the ssh_config file. This allows compatibility with older systems that require the ssh-rsa algorithm for key exchange and authentication."
+  },
+  "Tail Logs": {
+    "prefix": "_tail logs",
+    "body": [
+      "sudo tail -f /var/log/messages /var/log/pictometry-logger.log /var/log/httpd/error_log /var/log/httpd/ssl_error_log"
+    ],
+    "description": "Tail multiple log files. It will run the sudo tail -f command for the four specified log files, allowing you to monitor them in real-time."
+  },
+  "Fix SSL Certificates Issue": {
+    "prefix": "_fix ssl",
+    "body": [
+      "cd /etc/pki/tls/certs",
+      "Run this cmd -> sudo curl https://curl.se/ca/cacert.pem -o ca-bundle.crt -k"
+    ],
+    "description": "Fix SSL certificates issue."
+  },
+  "Enable Apache Module": {
+    "prefix": "_enable apache module",
+    "body": ["sudo a2enmod TYPE_YOUR_MOUDLE_NAME"],
+    "description": "Enable Apache module. To enable Apache modules on your Ubuntu system, you can use the a2enmod command followed by the name of the module. For example, to enable the php5.6 module, you can run: sudo a2enmod php5.6. Similarly, to enable the authnz_ldap and authz_core modules, you can run: <ul><li>sudo a2enmod authnz_ldap </li><li> sudo a2enmod authz_core </li><li> sudo a2enmod fcgid</li></ul>"
+  },
+  "Check Apache Configuration": {
+    "prefix": "_check apache",
+    "body": ["sudo apachectl configtest"],
+    "description": "Check Apache configuration for syntax errors"
+  },
+  "Restart Apache Server": {
+    "prefix": "_restart apache",
+    "body": ["sudo systemctl restart apache2"],
+    "description": "Restart Apache server"
+  },
+  "SCP with ssh-dss": {
+    "prefix": "_scp ssh-dss",
+    "body": ["sudo scp -oHostKeyAlgorithms=+ssh-dss <source> <destination>"],
+    "description": "Copy files using scp with ssh-dss key algorithm"
+  },
+  "Create Symbolic Link for Apache": {
+    "prefix": "_apache symlink",
+    "body": ["sudo ln -s /etc/apache2/conf.d /etc/apache2/sites-enabled/"],
+    "description": "Create a symbolic link between /etc/apache2/conf.d and /etc/apache2/sites-enabled"
+  },
+  "Mount Remote Directory in Linux": {
+    "prefix": "_mount_remote_directory",
+    "body": [
+      "sudo mount serverIP_OR_DOMAIN_NAME:/share/path/ /mnt/local/directory/path/"
+    ],
+    "description": "Mount a remote directory from a server to a local mount point in Linux"
+  },
+  "Yum List (First 10 Packages)": {
+    "prefix": "_yum_list",
+    "body": "yum list | head -n 10",
+    "description": "Display the first 10 packages available in the Yum package manager."
+  },
+  "Disk Space Usage": {
+    "prefix": "_disk_space_usage",
+    "body": "df -h",
+    "description": "Display disk space usage of all mounted filesystems in a human-readable format."
+  },
+  "List Block Devices": {
+    "prefix": "_lsblk",
+    "body": "lsblk",
+    "description": "List information about all available block devices (disks) connected to the system."
+  },
+  "Resize Filesystem": {
+    "prefix": "_resize_filesystem",
+    "body": "sudo resize2fs /dev/xvda1",
+    "description": "Resize the filesystem on the specified device (/dev/xvda1 in this example) after resizing the underlying partition."
+  },
+  "Replace Text in File with sed": {
+    "prefix": "_sed_replace_text",
+    "body": "sed -i 's/old_text/new_text/g' your_file_name",
+    "description": "Replace 'old_text' with 'new_text' in the specified 'your_file_name' using sed."
+  },
+  "Yum Search for Python27-pip Package": {
+    "prefix": "_yum_search_python27-pip",
+    "body": "yum search python27-pip",
+    "description": "Search for the 'python27-pip' package using Yum package manager."
+  },
+  "Install VSCE": {
+    "prefix": "_install_vsce",
+    "body": "npm install -g @vscode/vsce",
+    "description": "Install VS Code Extension Manager (VSCE) globally using Node.js package manager (npm)."
+  },
+  "Package VS Code Extension": {
+    "prefix": "_package_extension",
+    "body": "vsce package",
+    "description": "Package the VS Code extension into a .vsix file for publishing."
+  },
+  "Publish VS Code Extension with Token": {
+    "prefix": "_publish_extension_token",
+    "body": "vsce publish -p VSCE_TOKEN",
+    "description": "Publish the VS Code extension to the VS Code Marketplace using a Personal Access Token (VSCE_TOKEN). <br/> <a href='https://learn.microsoft.com/en-in/azure/devops/organizations/accounts/create-organization?view=azure-devops' target='_blank'> Reference Link </a>"
+  },
+  "Create User in Ubuntu": {
+    "prefix": "_adduser",
+    "body": ["adduser <type username>"],
+    "description": "Create a new user in Ubuntu"
+  },
+  "Check if User is Created": {
+    "prefix": "_checkuser",
+    "body": ["id <type username> OR grep <type username> /etc/passwd"],
+    "description": "Check if a user is created in Ubuntu"
+  },
+  "Get Public IP Address": {
+    "prefix": "_public_ip",
+    "body": ["curl ifconfig.me"],
+    "description": "Get the Public IP Address"
+  },
+  "Get Local IP Address": {
+    "prefix": "_local_ip",
+    "body": ["hostname -I"],
+    "description": "Get the Local IP Address"
+  },
+  "Create sftp User and Config": {
+    "prefix": "_create_sftp_user",
+    "body": [
+      "// Step 1: Create SFTP user 'sftuser' with nologin shell",
+      "sudo useradd -s /sbin/nologin sftuser",
+      
+      "// Step 2: Verify user creation",
+      "id sftuser",
+      
+      "// Step 3: Set password for 'sftuser'",
+      "sudo passwd sftuser",
+      
+      "// Step 4: Switch to 'sftuser' account",
+      "sudo su - sftuser",
+      
+      "// Step 5: Edit 'sshd_config' using 'vi'",
+      "sudo vi /etc/ssh/sshd_config",
+      
+      "// Step 6: Inside 'vi', press '\\' and type 'Subsystem' to search",
+      "// Step 7: Press 'I' to enable insert mode and add the following lines:",
+      "// Match User sftuser",
+      "//    ForceCommand internal-SFTP",
+      "//    ChrootDirectory /var/www/",
+      "//    AllowTcpForwarding no",
+      "//    X11Forwarding no",
+      "// Step 8: Press 'Esc' to exit insert mode",
+      "// Step 9: Save and exit 'vi' by typing ':wq' and pressing Enter",
+      
+      "// Step 10: Restart the SSH service to apply changes",
+      "sudo service sshd restart"
+    ],
+    "description": "Create SFTP user and enable SFTP Chroot - Step-by-step guide"
+  },
+  "System Information": {
+    "prefix": "_sys_info",
+    "body": [
+      "// Get OS type",
+      "uname -s",
+      
+      "// Get OS version",
+      "uname -r",
+      
+      "// Get OS flavor",
+      "lsb_release -a 2>/dev/null || cat /etc/*-release 2>/dev/null | head -n1 || echo 'Unknown'",
+      
+      "// Get machine architecture",
+      "uname -m",
+      
+      "// Get kernel version",
+      "uname -v"
+    ],
+    "description": "Get comprehensive system information"
   }
 }
