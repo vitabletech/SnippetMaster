@@ -66,6 +66,10 @@
       {
         "language": "php",
         "path": "./snippets/wp_admin.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/docker.code-snippets"
       }
     ]
   },
@@ -90,8 +94,9 @@
     "web-development",
     "php",
     "javascript",
-    "html",
+    "docker",
     "css",
+    "sass",
     "msrajawat298",
     "vitabletech",
     "SnippetMaster",
@@ -101,8 +106,8 @@
     "SnipAssist",
     "CodeFuse",
     "SnipPilot",
-    "CodeWise",
-    "SnipCraft"
+    "Code snippet",
+    "All in one Code snippet"
   ],
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
