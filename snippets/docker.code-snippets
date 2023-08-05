@@ -1,0 +1,54 @@
+{
+  "Docker Commands": {
+    "prefix": "_docker",
+    "body": [
+      "docker ps -a | grep geoms",
+      "docker logs <containerid>",
+      "docker exec -it <containerid> /bin/bash"
+    ],
+    "description": "Docker commands for container management"
+  },
+  "Create Docker Image from Container": {
+    "prefix": "_create docker image",
+    "body": [
+      "docker ps",
+      "docker commit <container_id_or_name> <image_name>:<tag>"
+    ],
+    "description": "Create a new Docker image from a running container.<br/>Example:<ol><li> Run 'docker ps' to identify the running containers.</li><li>2. Choose the container ID or name that you want to create an image from.</li><li>3. Replace '<container_id_or_name>' with the chosen ID or name.</li><li>4. Replace '<image_name>:<tag>' with the desired image name and tag.</li><li>   For example, 'docker commit e8c953feacf1 php/webserver5:1.4.1.2'.</li></ol>This command allows you to create a new Docker image based on the current state of a running container. The resulting image will be saved locally and can be used to instantiate new containers with the same configuration and data."
+  },
+  "Push Docker Image to aws ECR": {
+    "prefix": "_push docker image to aws ECR",
+    "body": [
+      "docker tag <image_name> <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>",
+      "docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>"
+    ],
+    "description": "Push your Docker container to AWS Container Registry (ECR).<ol>Example:<li>After creating the Docker image, use 'docker tag' to assign the ECR repository URI to the image.</li><li>   For example, 'docker tag php/webserver5.6:1.0.0.0 11098765432.dkr.ecr.us-east-2.amazonaws.com/php/webserver5.6:1.0.0.0'.</li><li> Run 'docker push' to upload the image to your AWS ECR repository.</li><li>   For example, 'docker push 11098765432.dkr.ecr.us-east-2.amazonaws.com/php/webserver5.6:1.0.0.0'.</li></ol>This command sequence allows you to push your locally created Docker image to the AWS ECR repository, making it available for use in AWS services such as ECS, EKS, or Elastic Beanstalk."
+  },
+  "Share Docker Image Locally": {
+    "prefix": "_share image",
+    "body": ["docker save -o <output_file.tar> <image_name>:<tag>"],
+    "description": "Share the Docker image without pushing to AWS ECR.<ol>Example:<li>1. Save the Docker image as a file using 'docker save' command.</li><li>   For example, 'docker save -o webserver5.6.tar php/webserver5:1.4.1.2'.</li><li>2. Share the saved image file (webserver5.6.tar) with the recipient using a suitable file-sharing method.</li><ol>This command allows you to save the Docker image as a file locally, which you can then share with others without pushing it to the AWS ECR registry."
+  },
+  "Load Docker Image from Local File": {
+    "prefix": "_load image",
+    "body": ["docker load -i <input_file.tar>"],
+    "description": "Import or pull the Docker image from the local system.<ol>Example:</li><li>1. Load the Docker image from the saved file using 'docker load' command.</li><li>   For example, 'docker load -i webserver5.6.tar'.<ol>This command allows you to import or pull a Docker image from a locally saved file (e.g., after receiving it from someone who shared it without pushing it to the AWS ECR registry)."
+  },
+  "Docker Run with Your Project Name and Image": {
+    "prefix": "_docker_run_project",
+    "body": "docker run -it --name REPLACE_WITH_YOUR_PROJECT_NAME PASTE_YOUR_IMAGE_NAME",
+    "description": "Run a Docker container with your project name and image."
+  },
+
+  "Docker Pull CentOS Image": {
+    "prefix": "_docker_pull_centos",
+    "body": "docker pull centos",
+    "description": "Pull the latest CentOS image from Docker Hub."
+  },
+
+  "Docker Run CentOS Container": {
+    "prefix": "_docker_run_centos",
+    "body": "docker run -it --name mycentos centos",
+    "description": "Run an interactive CentOS container named 'mycentos'."
+  }
+}
