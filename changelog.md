@@ -1,3 +1,9 @@
+## Changelog - Version 1.2.5
+
+- Modified workflow to trigger on tag pushes instead of branch pushes. (See `.github/workflows/publish.yml`)
+- Added Docker-related code snippets for container management and image manipulation. (See `snippets/docker.code-snippets`)
+- Added new shell commands for various tasks like checking Apache configuration, tailing logs, fixing SSL certificate issues, mounting remote directories, etc. (See `snippets/shell.code-snippets`)
+
 ## Changelog - Version 1.2.3 and 1.2.4
 
 - One bug fixing and add workflow action
