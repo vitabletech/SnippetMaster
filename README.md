@@ -36,6 +36,7 @@ SnippetMaster currently supports the following languages:
 * Css
 * Sass
 * Wordpress
+* Docker commands
 * Laravel
 * React
 * AngularJS

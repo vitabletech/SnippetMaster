@@ -10,7 +10,7 @@ module.exports = {
           'refactor',
           'revert',
           'style',
-          'test',
+          'release',
           'enhancement',
           'feature',
           'added',
