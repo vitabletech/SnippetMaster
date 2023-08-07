@@ -1,4 +1,4 @@
-## Changelog - Version 1.2.5
+## Changelog - Version 1.3.0
 
 - Modified workflow to trigger on tag pushes instead of branch pushes. (See `.github/workflows/publish.yml`)
 - Added Docker-related code snippets for container management and image manipulation. (See `snippets/docker.code-snippets`)
