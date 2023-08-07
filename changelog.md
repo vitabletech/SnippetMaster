@@ -1,3 +1,11 @@
+## Changelog - Version 1.4.0
+
+- Added new code snippets for Git and GitHub commands. (See `snippets/git.code-snippets`)
+- Enhanced existing code snippets for Docker and shell commands. (See `snippets/docker.code-snippets` and `snippets/shell.code-snippets`)
+- Updated the supported languages list in the README:
+- Contributors can be found [here](https://github.com/vitabletech/SnippetMaster/graphs/contributors).
+- For full details, refer to the [Changelog](changelog.md).
+
 ## Changelog - Version 1.3.0
 
 - Modified workflow to trigger on tag pushes instead of branch pushes. (See `.github/workflows/publish.yml`)
