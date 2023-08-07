@@ -70,14 +70,18 @@
       {
         "language": "",
         "path": "./snippets/docker.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/git.code-snippets"
       }
     ]
   },
   "keywords": [
-    "visual-studio-code",
+    "git",
     "vscode",
     "All in One Snippet Master",
-    "python",
+    "git commands",
     "react",
     "react development",
     "windows commands",

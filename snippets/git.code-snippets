@@ -1,0 +1,123 @@
+{
+  "git log": {
+    "prefix": "_git_log_beautify",
+    "body": [
+      "git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
+    ],
+    "description": "git log with more visibility. Using --graph and --format we can quickly get a summary view of git commits in our project."
+  },
+  "git stat": {
+    "prefix": "_git_stat",
+    "body": ["git show <commit> --stat"],
+    "description": "Using the --stat flag you’ll see the commit summary along with the files that changed and details on how they changed."
+  },
+  "git config": {
+    "prefix": "_git_config",
+    "body": [
+      "git config --global user.email \"email@gmail.com\"",
+      "git config --global user.name \"your username\"",
+      "git config -l //to check all the config is set or not"
+    ],
+    "description": "Git usefull config commands"
+  },
+  "_git_status_only_modified": {
+    "prefix": "_git_status_only_modified",
+    "body": ["git ls-files -m //git status only modified files"],
+    "description": "git status only modified files"
+  },
+  "Git Author Reset Entire Project History": {
+    "prefix": "_git reset entire project history",
+    "body": [
+      "git rebase -r --root --exec 'git commit --amend --no-edit --reset-author'"
+    ],
+    "description": "Git Author Reset Entire Project History"
+  },
+  "Git Author Reset Single Commit": {
+    "prefix": "_git reset single commit",
+    "body": ["git commit --amend --no-edit --reset-author"],
+    "description": "Git Author Reset Single Commit"
+  },
+  "Generate SSH Key": {
+    "prefix": "_ssh key",
+    "body": ["ssh-keygen -t ed25519 -C 'your_email@example.com'"],
+    "description": "Generate SSH Key"
+  },
+  "Show All branch local and remote": {
+    "prefix": "_git branch all",
+    "body": ["git branch --all"],
+    "description": "Show All branch local and remote"
+  },
+  "Clear git cache": {
+    "prefix": "_git clear cache",
+    "body": ["git rm -rf --cached ."],
+    "description": "Remote cache in git"
+  },
+  "Git rename the branch": {
+    "prefix": "_git rename the branch",
+    "body": ["git branch -m <oldname> <newname>"],
+    "description": "rename the branch name in local git"
+  },
+  "Git add remote origin": {
+    "prefix": "_git add remote origin Url",
+    "body": ["git remote add origin <url of your repository>"],
+    "description": "Git add remote origin"
+  },
+  "Git Update remote origin": {
+    "prefix": "_git Update remote origin Url",
+    "body": ["git remote set-url origin <url of your repository>"],
+    "description": "Git Update remote origin "
+  },
+  "Preview and Apply Git Patch": {
+    "prefix": "_git apply patch",
+    "body": [
+      "# Display stats of changes in the patch",
+      "git apply --stat <patch_file>",
+
+      "# Perform a dry run to detect errors",
+      "git apply --check <patch_file>",
+
+      "# Preview patch application with detailed information",
+      "git apply --verbose <patch_file> > patch_preview.txt",
+
+      "# Apply the patch and handle whitespace issues",
+      "git apply --reject --whitespace=fix <patch_file>",
+
+      "# If necessary, manually apply the patch and create reject files",
+      "# git apply <patch_file>",
+      "# In case of errors, generate reject files and references for changes not applied",
+      "# git apply --reject <patch_file>"
+    ],
+    "description": "Preview and apply a Git patch with various options. <br/>Use these commands to preview and apply a Git patch:</li> Display stats of changes in the patch: <code>git apply --stat <patch_file><code></li><li>. Perform a dry run to detect errors:<code>   git apply --check <patch_file></code></li><li> Preview patch application with detailed information:<code> git apply --verbose <patch_file> patch_preview.txt</code>  </li><li> Apply the patch and handle whitespace issues:<code> git apply --reject --whitespace=fix <patch_file></code>  </li><li>5 If necessary, manually apply the patch and create reject files:<code>   git apply <patch_file></code></li><li> In case of errors, generate reject files and references for changes not applied:<code>  git apply --reject <patch_file></code></li></ol>  These commands help you preview and apply patches while handling whitespace issues and potential errors. Best way to apply git patch more Info  <a href = 'https://git-scm.com/docs/git-apply' target='_blank'>Click me</a>"
+  },
+  "Delete GitHub Branch": {
+    "prefix": "_git_delete branch",
+    "body": ["git push origin --delete <branch_name>"],
+    "description": "Delete a branch from GitHub.<br/>Follow these steps to delete a branch:<br/>1. Run 'git push origin --delete <branch_name>'<br/>   Replace '<branch_name>' with the name of the branch you want to delete.<br/>This command will delete the specified branch from the remote repository on GitHub."
+  },
+  "Delete Local Branch": {
+    "prefix": "_git delete local branch",
+    "body": [
+      "# Delete a local branch that has been fully merged",
+      "git branch -d <local_branch>",
+      "# Delete a local branch forcefully, including unmerged/unpushed commits",
+      "git branch -D <local_branch>"
+    ],
+    "description": "Delete a branch from the local repository.<br/>Follow these steps to delete a local branch:<br/>1. Run 'git branch -d <local_branch>' to delete a branch that has been fully merged.<br/>2. Run 'git branch -D <local_branch>' to forcefully delete a branch, even if it contains unmerged or unpushed commits.<br/>   Replace '<local_branch>' with the name of the local branch you want to delete.<br/>These commands will remove the specified local branch from your local repository."
+  },
+  "Merge Multiple Commits": {
+    "prefix": "_git_merge commits",
+    "body": [
+      "# Start an interactive rebase for the last n commits",
+      "git rebase -i HEAD~<commit_count>",
+      "# In the interactive rebase editor, change 'pick' to 'squash' or 's' for commits you want to merge",
+      "# Save and exit the editor",
+      "git push origin <branch_name>"
+    ],
+    "description": "Merge multiple commits into a single commit using interactive rebase.<br/>Follow these steps to merge multiple commits:<br/>1. Run 'git rebase -i HEAD~<commit_count>' where '<commit_count>' is the number of commits you want to merge.<br/>2. In the interactive rebase editor, change 'pick' to 'squash' or 's' for the commits you want to merge.<br/>3. Save and exit the editor.<br/>4. Push the changes to the remote repository.<br/>   Replace '<branch_name>' with the name of the branch you want to push to.<br/>These steps allow you to combine multiple commits into a single commit using interactive rebase."
+  },
+  "List Changed Files Between Commits": {
+    "prefix": "_git list changed files between Commits",
+    "body": ["git diff --name-only <start-commit>..<end-commit>"],
+    "description": "List all the changed files between two commits using 'git diff'.<br/>Follow these steps to list changed files:<br/>1. Run 'git diff --name-only <start-commit>..<end-commit>'<br/>   Replace '<start-commit>' and '<end-commit>' with the respective commit hashes or references.<br/>This command will display a list of all the files that have changed between the two specified commits."
+  }
+}
