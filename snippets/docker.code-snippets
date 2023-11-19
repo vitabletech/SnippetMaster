@@ -8,6 +8,13 @@
     ],
     "description": "Docker commands for container management"
   },
+  "Create Docker Image from Dockerfile": {
+    "prefix": "_create docker image from Dockerfile",
+    "body": [
+      "docker build -t your-image-name:tag ."
+    ],
+    "description": "Create Docker Image from Dockerfile. Build a Docker image with the specified name and tag."
+  },
   "Create Docker Image from Container": {
     "prefix": "_create docker image",
     "body": [
@@ -50,5 +57,106 @@
     "prefix": "_docker_run_centos",
     "body": "docker run -it --name mycentos centos",
     "description": "Run an interactive CentOS container named 'mycentos'."
+  },
+  "Docker Login": {
+    "prefix": "_docker_login",
+    "body": "docker login",
+    "description": "Log in to Docker Hub. You will be prompted to enter your Docker Hub username, password, and, if enabled, two-factor authentication code."
+  },
+  "Docker Run Container": {
+    "prefix": "_docker_run_container",
+    "body": "docker run -d -p host_port:container_port image_name:tag",
+    "description": "Run a Docker container in detached mode with port mapping."
+  },
+  "Docker List Containers": {
+    "prefix": "_docker_list_containers",
+    "body": "docker ps",
+    "description": "List running Docker containers."
+  },
+  "Docker List All Containers": {
+    "prefix": "_docker_list_all_containers",
+    "body": "docker ps -a",
+    "description": "List all Docker containers, including stopped ones."
+  },
+  "Docker Stop Container": {
+    "prefix": "_docker_stop_container",
+    "body": "docker stop container_id",
+    "description": "Stop a running Docker container."
+  },
+  "Docker Remove Container": {
+    "prefix": "_docker_remove_container",
+    "body": "docker rm container_id",
+    "description": "Remove a Docker container."
+  },
+  "Docker Remove Image": {
+    "prefix": "_docker_remove_image",
+    "body": "docker rmi image_id",
+    "description": "Remove a Docker image."
+  },
+  "Docker List Images": {
+    "prefix": "_docker_list_images",
+    "body": "docker images",
+    "description": "List Docker images."
+  },
+  "Docker Pull Image": {
+    "prefix": "_docker_pull_image",
+    "body": "docker pull image_name:tag",
+    "description": "Pull a Docker image from Docker Hub."
+  },
+  "Docker Tag Image": {
+    "prefix": "_docker_tag_image",
+    "body": "docker tag source_image:source_tag new_image:tag",
+    "description": "Tag a Docker image with a new name and/or tag."
+  },
+  "Docker Create Volume": {
+    "prefix": "_docker_create_volume",
+    "body": "docker volume create volume_name",
+    "description": "Create a Docker volume."
+  },
+  "Docker List Volumes": {
+    "prefix": "_docker_list_volumes",
+    "body": "docker volume ls",
+    "description": "List Docker volumes."
+  },
+  "Docker List Networks": {
+    "prefix": "_docker_list_networks",
+    "body": "docker network ls",
+    "description": "List Docker networks."
+  },
+  "Docker Compose Up": {
+    "prefix": "_docker_compose_up",
+    "body": "docker-compose up -d",
+    "description": "Run containers defined in a Docker Compose file."
+  },
+  "Docker Compose Down": {
+    "prefix": "_docker_compose_down",
+    "body": "docker-compose down",
+    "description": "Stop and remove containers defined in a Docker Compose file."
+  },
+  "Docker Compose Build": {
+    "prefix": "_docker_compose_build",
+    "body": "docker-compose build",
+    "description": "Build or rebuild services defined in a Docker Compose file."
+  },
+  "Docker Compose Logs": {
+    "prefix": "_docker_compose_logs",
+    "body": "docker-compose logs service_name",
+    "description": "View logs for a specific service in a Docker Compose file."
+  },
+  "Docker Compose Scale": {
+    "prefix": "_docker_compose_scale",
+    "body": "docker-compose up -d --scale service_name=2",
+    "description": "Scale services (replicas) defined in a Docker Compose file."
+  },
+  "Docker Inspect Container": {
+    "prefix": "_docker_inspect_container",
+    "body": "docker inspect container_id",
+    "description": "Inspect details of a Docker container."
+  },
+  "Docker Inspect Image": {
+    "prefix": "_docker_inspect_image",
+    "body": "docker inspect image_id",
+    "description": "Inspect details of a Docker image."
   }
+  
 }

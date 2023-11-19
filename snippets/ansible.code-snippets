@@ -1,0 +1,117 @@
+{
+  "Ansible Ad-Hoc Command": {
+    "prefix": "_ansible_adhoc",
+    "body": "ansible target_host -m module -a 'module_arguments' -u remote_user",
+    "description": "Run an Ansible ad-hoc command."
+  },
+  "Ansible Playbook Run": {
+    "prefix": "_ansible_playbook_run",
+    "body": "ansible-playbook playbook.yml -i inventory_file -u remote_user",
+    "description": "Run an Ansible playbook."
+  },
+  "Ansible Ping Module": {
+    "prefix": "_ansible_ping",
+    "body": "ansible target_host -m ping",
+    "description": "Check if Ansible can connect to the target host."
+  },
+  "Ansible Copy Module": {
+    "prefix": "_ansible_copy",
+    "body": "ansible target_host -m copy -a 'src=source_file dest=destination_file'",
+    "description": "Copy a file to the target host using the Ansible copy module."
+  },
+  "Ansible File Module": {
+    "prefix": "_ansible_file",
+    "body": "ansible target_host -m file -a 'path=file_path state=present'",
+    "description": "Create or ensure the existence of a file or directory on the target host."
+  },
+  "Ansible Package Module": {
+    "prefix": "_ansible_package",
+    "body": "ansible target_host -m package -a 'name=package_name state=present'",
+    "description": "Install a package on the target host using the Ansible package module."
+  },
+  "Ansible Service Module": {
+    "prefix": "_ansible_service",
+    "body": "ansible target_host -m service -a 'name=service_name state=started'",
+    "description": "Manage the state of a service on the target host using the Ansible service module."
+  },
+  "Ansible User Module": {
+    "prefix": "_ansible_user",
+    "body": "ansible target_host -m user -a 'name=username state=present'",
+    "description": "Manage user accounts on the target host using the Ansible user module."
+  },
+  "Ansible Template Module": {
+    "prefix": "_ansible_template",
+    "body": "ansible target_host -m template -a 'src=template_file dest=destination_file'",
+    "description": "Render a Jinja2 template and copy it to the target host using the Ansible template module."
+  },
+  "Ansible Gather Facts": {
+    "prefix": "_ansible_gather_facts",
+    "body": "ansible target_host -m setup",
+    "description": "Gather facts about the target host using the Ansible setup module."
+  },
+  "Ansible Debug Module": {
+    "prefix": "_ansible_debug",
+    "body": "ansible target_host -m debug -a 'msg=debug_message'",
+    "description": "Print debug information during Ansible playbook execution using the Ansible debug module."
+  },
+  "Install SSH Server on Node Machine": {
+    "prefix": "_install_ssh_server",
+    "body": "sudo apt-get install openssh-server",
+    "description": "Install the SSH server on the node machine if not already installed."
+  },
+  "Generate SSH Key": {
+    "prefix": "_generate_ssh_key",
+    "body": "ssh-keygen",
+    "description": "Generate an SSH key on the local machine."
+  },
+  "Copy SSH Key to Hosts": {
+    "prefix": "_copy_ssh_key",
+    "body": "ssh-copy-id username@hostname or hostIP",
+    "description": "Copy the generated SSH key to the specified hosts for passwordless SSH login."
+  },
+  "Check SSH Connection": {
+    "prefix": "_check_ssh_connection",
+    "body": "ssh <nodeName> or <hostname or hostIP>",
+    "description": "Check the SSH connection to the specified node or host. It should not prompt for a password."
+  },
+  "Check Ansible Version": {
+    "prefix": "_check_ansible_version",
+    "body": "ansible --version",
+    "description": "Check the installed Ansible version."
+  },
+  "List All Hosts": {
+    "prefix": "_list_all_hosts",
+    "body": "ansible all --list-hosts",
+    "description": "List all hosts configured in the Ansible inventory."
+  },
+  "List Hosts in a Group": {
+    "prefix": "_list_hosts_in_group",
+    "body": "ansible group-name --list-hosts",
+    "description": "List hosts belonging to a specific group in the Ansible inventory."
+  },
+  "Create New Encrypted Playbook": {
+    "prefix": "_ansible_vault_create",
+    "body": "ansible-vault create vault.yml",
+    "description": "Create a new encrypted Ansible playbook."
+  },
+  "Edit Encrypted Playbook": {
+    "prefix": "_ansible_vault_edit",
+    "body": "ansible-vault edit vault.yml",
+    "description": "Edit an existing encrypted Ansible playbook."
+  },
+  "Change Vault Password": {
+    "prefix": "_ansible_vault_rekey",
+    "body": "ansible-vault rekey vault.yml",
+    "description": "Change the password for an encrypted Ansible playbook."
+  },
+  "Encrypt Existing Playbook": {
+    "prefix": "_ansible_vault_encrypt",
+    "body": "ansible-vault encrypt vault.yml",
+    "description": "Encrypt an existing Ansible playbook."
+  },
+  "Decrypt Existing Playbook": {
+    "prefix": "_ansible_vault_decrypt",
+    "body": "ansible-vault decrypt vault.yml",
+    "description": "Decrypt an existing encrypted Ansible playbook."
+  }
+}
