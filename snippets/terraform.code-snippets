@@ -1,0 +1,97 @@
+{
+  "Terraform Initialize": {
+    "prefix": "_terraform_init",
+    "body": "terraform init",
+    "description": "Initialize a Terraform working directory (downloads providers and modules)."
+  },
+  "Terraform Plan": {
+    "prefix": "_terraform_plan",
+    "body": "terraform plan",
+    "description": "Generate and show an execution plan for changes to be applied."
+  },
+  "Terraform Apply": {
+    "prefix": "_terraform_apply",
+    "body": "terraform apply",
+    "description": "Apply changes to infrastructure according to a Terraform execution plan."
+  },
+  "Terraform Destroy": {
+    "prefix": "_terraform_destroy",
+    "body": "terraform destroy",
+    "description": "Destroy Terraform-managed infrastructure."
+  },
+  "Terraform Show": {
+    "prefix": "_terraform_show",
+    "body": "terraform show",
+    "description": "Show the current state or a saved plan."
+  },
+  "Terraform Validate": {
+    "prefix": "_terraform_validate",
+    "body": "terraform validate",
+    "description": "Check whether the configuration files are valid."
+  },
+  "Terraform Get Modules": {
+    "prefix": "_terraform_get",
+    "body": "terraform get",
+    "description": "Download and install modules for the configuration."
+  },
+  "Terraform Console": {
+    "prefix": "_terraform_console",
+    "body": "terraform console",
+    "description": "Interactive console for evaluating expressions."
+  },
+  "Terraform Import Resource": {
+    "prefix": "_terraform_import",
+    "body": "terraform import resource_type.resource_name resource_id",
+    "description": "Import existing infrastructure into Terraform."
+  },
+  "Terraform Output": {
+    "prefix": "_terraform_output",
+    "body": "terraform output",
+    "description": "Show output values from your root module."
+  },
+  "Terraform State": {
+    "prefix": "_terraform_state",
+    "body": "terraform state [subcommand]",
+    "description": "Advanced state management commands."
+  },
+  "Terraform Version": {
+    "prefix": "_terraform_version",
+    "body": "terraform version",
+    "description": "Display the Terraform version installed on your system."
+  },
+  "Terraform Version (JSON Format)": {
+    "prefix": "_terraform_version_json",
+    "body": "terraform version -json",
+    "description": "Display the Terraform version in JSON format."
+  },
+  "Terraform Replace Command": {
+    "prefix": "_terraform_replace",
+    "body": "terraform fmt -recursive",
+    "description": "Format Terraform configuration files and replace existing files with the formatted version. Use with caution, as it overwrites the original files."
+  },
+  "Terraform Apply with Auto-Approval": {
+    "prefix": "_terraform_apply_auto_approve",
+    "body": "terraform apply -auto-approve",
+    "description": "Apply changes to infrastructure without requiring interactive approval. Use with caution."
+  },
+  "Terraform Validate": {
+    "prefix": "_terraform_validate",
+    "body": "terraform validate",
+    "description": "Check whether the configuration files are valid."
+  },
+  "Terraform Output": {
+    "prefix": "_terraform_output",
+    "body": "terraform output",
+    "description": "Show output values from your root module."
+  },
+  "Terraform Import": {
+    "prefix": "_terraform_import",
+    "body": "terraform import resource_type.resource_name resource_id",
+    "description": "Import existing infrastructure into Terraform."
+  },
+  "Terraform Refresh": {
+    "prefix": "_terraform_refresh",
+    "body": "terraform refresh",
+    "description": "Update the state file to match the real-world resources. Useful when changes are made outside of Terraform."
+  }
+}

@@ -1,0 +1,78 @@
+{
+    "Configure AWS CLI": {
+      "prefix": "_configure_aws_cli",
+      "body": "aws configure",
+      "description": "Configure AWS CLI with your AWS access key, secret key, region, and output format."
+    },
+    "List S3 Buckets": {
+      "prefix": "_list_s3_buckets",
+      "body": "aws s3 ls",
+      "description": "List all S3 buckets in the configured region."
+    },
+    "Copy File to S3": {
+      "prefix": "_copy_to_s3",
+      "body": "aws s3 cp local_file s3://bucket_name/",
+      "description": "Copy a local file to an S3 bucket."
+    },
+    "Copy S3 Object to Local": {
+      "prefix": "_copy_from_s3",
+      "body": "aws s3 cp s3://bucket_name/object_key local_file",
+      "description": "Copy an S3 object to the local file system."
+    },
+    "Sync Local Directory with S3": {
+      "prefix": "_sync_with_s3",
+      "body": "aws s3 sync local_directory s3://bucket_name/",
+      "description": "Sync a local directory with an S3 bucket."
+    },
+    "List EC2 Instances": {
+      "prefix": "_list_ec2_instances",
+      "body": "aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType,PublicIpAddress]' --output table",
+      "description": "List EC2 instances in the current region."
+    },
+    "Create EC2 Instance": {
+      "prefix": "_create_ec2_instance",
+      "body": "aws ec2 run-instances --image-id ami-xxxxxxxx --instance-type t2.micro --key-name key_pair_name --subnet-id subnet_id",
+      "description": "Create a new EC2 instance."
+    },
+    "Stop EC2 Instance": {
+      "prefix": "_stop_ec2_instance",
+      "body": "aws ec2 stop-instances --instance-ids instance_id",
+      "description": "Stop a running EC2 instance."
+    },
+    "Start EC2 Instance": {
+      "prefix": "_start_ec2_instance",
+      "body": "aws ec2 start-instances --instance-ids instance_id",
+      "description": "Start a stopped EC2 instance."
+    },
+    "Terminate EC2 Instance": {
+      "prefix": "_terminate_ec2_instance",
+      "body": "aws ec2 terminate-instances --instance-ids instance_id",
+      "description": "Terminate an EC2 instance."
+    },
+    "List RDS Instances": {
+      "prefix": "_list_rds_instances",
+      "body": "aws rds describe-db-instances --query 'DBInstances[*].[DBInstanceIdentifier,DBInstanceStatus,Engine,MasterUsername,Endpoint.Address,Endpoint.Port]' --output table",
+      "description": "List RDS database instances in the current region."
+    },
+    "Create RDS Instance": {
+      "prefix": "_create_rds_instance",
+      "body": "aws rds create-db-instance --db-instance-identifier instance_id --db-instance-class db_instance_class --engine db_engine --master-username master_username --master-user-password master_password",
+      "description": "Create a new RDS database instance."
+    },
+    "Delete RDS Instance": {
+      "prefix": "_delete_rds_instance",
+      "body": "aws rds delete-db-instance --db-instance-identifier instance_id --skip-final-snapshot",
+      "description": "Delete an RDS database instance without creating a final snapshot."
+    },
+    "List Lambda Functions": {
+      "prefix": "_list_lambda_functions",
+      "body": "aws lambda list-functions --query 'Functions[*].[FunctionName,Runtime,Handler]' --output table",
+      "description": "List Lambda functions in the current region."
+    },
+    "Invoke Lambda Function": {
+      "prefix": "_invoke_lambda_function",
+      "body": "aws lambda invoke --function-name function_name --payload '{\"key\":\"value\"}' output.txt",
+      "description": "Invoke a Lambda function with a JSON payload."
+    }
+  }
+  
