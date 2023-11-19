@@ -13,5 +13,80 @@
     "prefix": "_upgrade_all",
     "body": ["winget upgrade --all"],
     "description": "Upgrades all installed applications via Windows Package Manager (winget)."
+  },
+  "List Files and Directories": {
+    "prefix": "_list_files_directories",
+    "body": "dir",
+    "description": "List files and directories in the current directory."
+  },
+  "Change Directory": {
+    "prefix": "_change_directory",
+    "body": "cd path",
+    "description": "Change the current directory to the specified path."
+  },
+  "Copy Files or Directories": {
+    "prefix": "_copy_files_directories",
+    "body": "copy source destination",
+    "description": "Copy files or directories from source to destination."
+  },
+  "Move or Rename Files": {
+    "prefix": "_move_rename_files",
+    "body": "move source destination",
+    "description": "Move or rename files from source to destination."
+  },
+  "Delete Files": {
+    "prefix": "_delete_files",
+    "body": "del filename",
+    "description": "Delete a file."
+  },
+  "Delete Directory": {
+    "prefix": "_delete_directory",
+    "body": "rmdir /s /q directory",
+    "description": "Delete a directory and its contents recursively."
+  },
+  "Display IP Configuration": {
+    "prefix": "_ip_configuration",
+    "body": "ipconfig",
+    "description": "Display the IP configuration of all network interfaces."
+  },
+  "Ping a Host": {
+    "prefix": "_ping_host",
+    "body": "ping hostname_or_ip",
+    "description": "Ping a host to check network connectivity."
+  },
+  "Check System Information": {
+    "prefix": "_system_information",
+    "body": "systeminfo",
+    "description": "Display detailed information about the computer system."
+  },
+  "Task List": {
+    "prefix": "_task_list",
+    "body": "tasklist",
+    "description": "List all running processes."
+  },
+  "Kill a Process": {
+    "prefix": "_kill_process",
+    "body": "taskkill /F /PID process_id",
+    "description": "Terminate a process by its process ID."
+  },
+  "Check Disk for Errors": {
+    "prefix": "_check_disk_errors",
+    "body": "chkdsk /f",
+    "description": "Check and fix disk errors on the next system restart."
+  },
+  "Disk Space Usage": {
+    "prefix": "_disk_space_usage",
+    "body": "dir /s",
+    "description": "Display disk space usage for all directories and subdirectories."
+  },
+  "Open File Explorer": {
+    "prefix": "_open_file_explorer",
+    "body": "explorer",
+    "description": "Open File Explorer."
+  },
+  "System Shutdown": {
+    "prefix": "_system_shutdown",
+    "body": "shutdown /s /t 0",
+    "description": "Shutdown the system immediately."
   }
 }

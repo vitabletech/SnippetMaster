@@ -2,10 +2,10 @@
   "name": "snippetmaster",
   "displayName": "All in One Snippet Master",
   "description": "A Visual Studio Code extension that provides custom code snippets for a variety of programming languages. With SnippetMaster, you can save time and increase your productivity by quickly inserting common code patterns and snippets.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "publisher": "vitabletech",
   "author": {
-    "name": "Mayank singh Kushwah",
+    "name": "Mayank Singh Kushwah",
     "email": "info@vitabletech.in",
     "url": "https://vitabletech.in"
   },
@@ -74,16 +74,30 @@
       {
         "language": "",
         "path": "./snippets/git.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/ansible.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/terraform.code-snippets"
+      },
+      {
+        "language": "",
+        "path": "./snippets/aws.code-snippets"
       }
     ]
   },
   "keywords": [
+    "aws cli",
+    "AWS CLI commands",
+    "ansible",
+    "terraform",
     "git",
     "vscode",
     "All in One Snippet Master",
     "git commands",
-    "react",
-    "react development",
     "windows commands",
     "wordpress developer",
     "wordpress code snippets",
