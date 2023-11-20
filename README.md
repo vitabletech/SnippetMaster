@@ -26,10 +26,12 @@ For more information : https://vitabletech.github.io/SnippetMaster/
 
 ## Supported Languages
 
-SnippetMaster currently supports the following languages:
-
+* AWS cli
+* Ansible commands
+* Terraform commands
 * PHP
 * JavaScript
+* git/github commands
 * Sql
 * shell script/cmd
 * windows use full commands
@@ -38,7 +40,6 @@ SnippetMaster currently supports the following languages:
 * Wordpress
 * Docker commands
 * Laravel
-* git/githb commands
 
 ## Issues
 
