@@ -1,3 +1,34 @@
+## Changelog - Version 1.5.0
+
+## What's Changed
+* Release v1.5.0 by @msrajawat298 in https://github.com/vitabletech/SnippetMaster/pull/56
+* enhancement: add new commands ansible, terraform and aws cli by @msrajawat298 in https://github.com/vitabletech/SnippetMaster/pull/59
+
+### Features
+
+- **DevOps Commands:**
+  - **Ansible:**
+    - Added new commands for ad-hoc operations, playbook execution, and essential tasks.
+  - **Terraform:**
+    - Introduced commands for initialization, planning, applying, and managing Terraform infrastructure.
+  - **AWS CLI:**
+    - Included commands for common AWS operations, simplifying interactions with AWS services.
+  - **Docker:**
+    - Update and added new docker commands
+
+### Improvements
+
+- Updated and enhanced the repository with additional commands to facilitate DevOps processes.
+- Improved developer experience by providing a comprehensive set of commands for popular tools.
+
+### Documentation
+
+- Updated documentation to include details about the new commands and their usage.
+- Added examples and explanations for Ansible, Terraform, and AWS CLI commands.
+
+
+**Full Changelog**: https://github.com/vitabletech/SnippetMaster/compare/v1.4.0...v1.5.0
+
 ## Changelog - Version 1.4.0
 
 - Added new code snippets for Git and GitHub commands. (See `snippets/git.code-snippets`)
