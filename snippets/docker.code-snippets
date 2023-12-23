@@ -157,6 +157,75 @@
     "prefix": "_docker_inspect_image",
     "body": "docker inspect image_id",
     "description": "Inspect details of a Docker image."
+  },
+  "Create Docker Network": {
+    "prefix": "_create docker network",
+    "body": [
+      "docker network create your-network-name"
+    ],
+    "description": "Create Docker Network. Create a Docker network with the specified name."
+  },
+  "List Docker Networks": {
+    "prefix": "_list docker networks",
+    "body": [
+      "docker network ls"
+    ],
+    "description": "List Docker Networks. List all Docker networks on the system."
+  },
+  "Inspect Docker Network": {
+    "prefix": "_inspect docker network",
+    "body": [
+      "docker network inspect your-network-name"
+    ],
+    "description": "Inspect Docker Network. Display detailed information about a Docker network."
+  },
+  "Remove Docker Network": {
+    "prefix": "_remove docker network",
+    "body": [
+      "docker network rm your-network-name"
+    ],
+    "description": "Remove Docker Network. Remove a Docker network with the specified name."
+  },
+  "Create Container with Specific Network": {
+    "prefix": "_create container with network",
+    "body": [
+      "docker run --network=your-network-name -d your-image"
+    ],
+    "description": "Create Container with Specific Network. Run a Docker container with the specified network."
+  },
+  "Connect Container to Network": {
+    "prefix": "_connect container to network",
+    "body": [
+      "docker network connect your-network-name your-container"
+    ],
+    "description": "Connect Container to Network. Connect a running Docker container to a network."
+  },
+  "Disconnect Container from Network": {
+    "prefix": "_disconnect container from network",
+    "body": [
+      "docker network disconnect your-network-name your-container"
+    ],
+    "description": "Disconnect Container from Network. Disconnect a Docker container from a network."
+  },
+  "Show Container Network Connectivity": {
+    "prefix": "_show container network connectivity",
+    "body": [
+      "docker network inspect -f '{{json .NetworkSettings.Networks}}' your-container"
+    ],
+    "description": "Show Container Network Connectivity. Display network information for a Docker container."
+  },
+  "Create User-Defined Bridge Network": {
+    "prefix": "_create user-defined bridge network",
+    "body": [
+      "docker network create --driver bridge your-bridge-network"
+    ],
+    "description": "Create User-Defined Bridge Network. Create a user-defined bridge network for Docker containers."
+  },
+  "Create Overlay Network for Swarm": {
+    "prefix": "_create overlay network for swarm",
+    "body": [
+      "docker network create --driver overlay your-overlay-network"
+    ],
+    "description": "Create Overlay Network for Swarm. Create an overlay network for Docker Swarm services."
   }
-  
 }
