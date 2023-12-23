@@ -1,3 +1,17 @@
+## Changelog - Version 1.5.3
+* Added new commands realted to docker networks
+
+## Changelog - Version 1.5.2
+* Update console better print
+* What's Changed
+  - get update code from main branch after release by @msrajawat298 in #62
+  - release: update readme file by @msrajawat298 in #65
+  - got recent changes by @msrajawat298 in #66
+  - Full Changelog: v1.5.1...v1.5.2
+
+## Changelog - Version 1.5.1
+* Update Documention site.
+
 ## Changelog - Version 1.5.0
 
 ## What's Changed
